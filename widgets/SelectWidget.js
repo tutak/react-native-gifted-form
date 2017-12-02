@@ -39,10 +39,10 @@ module.exports = createReactClass({
         onValidation: this.props.onValidation,
         onValueChange: this.props.onValueChange,
 
-        name: this.props.name+'{'+val+'}',
-        ref: this.props.name+'{'+val+'}',
-        value: val,
-        unSelectAll: this.unSelectAll,
+                name: this.props.name+'{'+val+'}',
+                ref: this.props.name+'{'+val+'}',
+                value: false,
+                unSelectAll: this.unSelectAll,
 
         multiple: this.props.multiple,
         onClose: this.props.onClose, // got from ModalWidget

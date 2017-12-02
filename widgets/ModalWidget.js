@@ -2,13 +2,13 @@ import React from 'react';
 import createReactClass from 'create-react-class';
 import PropTypes from 'prop-types';
 import {
-  View,
-  Text,
-  TouchableHighlight,
-  Navigator,
-  Image,
-  TouchableOpacity,
-  PixelRatio,
+    View,
+    Text,
+    TouchableHighlight,
+    Navigator,
+    Image,
+    TouchableOpacity,
+    PixelRatio,
 } from 'react-native';
 
 var WidgetMixin = require('../mixins/WidgetMixin');
@@ -174,11 +174,11 @@ module.exports = createReactClass({
     });
   },
 
-  componentDidMount() {
-    this.setState({
-      value: this._getDisplayableValue(),
-    });
-  },
+    componentDidMount() {
+        this.setState({
+            value: this.props.placeholder,
+        });
+    },
 
   onClose(value, navigator = null) {
     if (typeof value === 'string') {
@@ -272,19 +272,14 @@ module.exports = createReactClass({
 
         {...this.props} // mainly for underlayColor
 
-        style={this.getStyle('rowContainer')}
-      >
-        <View style={this.getStyle('row')}>
-          {this._renderImage()}
-          <Text numberOfLines={1} style={this.getStyle('modalTitle')}>{this.props.title}</Text>
-          <View style={this.getStyle('alignRight')}>
-            <Text numberOfLines={1} style={this.getStyle('modalValue')}>{this.state.value}</Text>
-          </View>
-          {this.renderDisclosure()}
-        </View>
-      </TouchableHighlight>
-    );
-  },
+                style={this.getStyle('rowContainer')}
+            >
+              <View style={this.getStyle('row')}>
+                <Text numberOfLines={1} style={this.getStyle('modalValue')}>{this.state.value}</Text>
+              </View>
+            </TouchableHighlight>
+        );
+    },
 
   defaultStyles: {
     rowImage: {
@@ -300,7 +295,7 @@ module.exports = createReactClass({
     underlayColor: '#c7c7cc',
     row: {
       flexDirection: 'row',
-      height: 44,
+      height: 50,
       alignItems: 'center',
     },
     disclosure: {

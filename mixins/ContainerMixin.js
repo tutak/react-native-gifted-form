@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  ScrollView,
-  View,
-  Platform,
-  Dimensions
+    ScrollView,
+    View,
+    Platform,
+    Dimensions
 } from 'react-native';
 
 var GiftedFormManager = require('../GiftedFormManager');

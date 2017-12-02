@@ -3,7 +3,7 @@ import createReactClass from 'create-react-class';
 import PropTypes from 'prop-types';
 
 
-var {View, Text} = require('react-native')
+var {View, Text, TouchableOpacity} = require('react-native')
 var WidgetMixin = require('../mixins/WidgetMixin.js');
 
 
@@ -79,44 +79,48 @@ module.exports = createReactClass({
     }
   },
 
-  render() {
-    return (
-      <View>
-        <Button
-          ref='submitButton'
-          style={this.getStyle('submitButton')}
-          textStyle={this.getStyle('textSubmitButton')}
-          disabledStyle={this.getStyle('disabledSubmitButton')}
+    render() {
+        return (
+            <TouchableOpacity
+                ref='submitButton'
+                style={this.props.isDisabled ? this.getStyle('disabledSubmitButton'):this.getStyle('submitButton')}
+                textStyle={this.getStyle('textSubmitButton')}
 
-          isLoading={this.state.isLoading}
-          isDisabled={this.props.isDisabled}
-          activityIndicatorColor={this.props.activityIndicatorColor}
+                isLoading={this.state.isLoading}
+                disabled={this.props.isDisabled}
+                activityIndicatorColor={this.props.activityIndicatorColor}
 
           {...this.props}
 
-          onPress={() => this._doSubmit()}
-        >
-          {this.props.title}
-        </Button>
-      </View>
-    );
-  },
+                onPress={() => this._doSubmit()}
+            >
 
-  defaultStyles: {
-    submitButton: {
-      margin: 10,
-      backgroundColor: '#3498db',
-      borderWidth: 0,
-      borderRadius: 0,
-      height: 40,
+              <Text>{this.props.title}</Text>
+            </TouchableOpacity>
+        );
     },
-    disabledSubmitButton: {
-      opacity: 0.5,
+
+    defaultStyles: {
+        submitButton: {
+            backgroundColor: 'orange',
+            flexBasis: '30%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
+
+        },
+        disabledSubmitButton: {
+            opacity: 0.5,
+            backgroundColor: '#3498db',
+            flexBasis: '30%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
+        },
+        textSubmitButton: {
+            color: 'white',
+            fontSize: 15,
+        },
     },
-    textSubmitButton: {
-      color: 'white',
-      fontSize: 15,
-    },
-  },
 
 });

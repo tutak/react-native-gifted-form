@@ -1,15 +1,14 @@
-import React from 'react';
-import createReactClass from 'create-react-class';
-import {
+var React = require('react');
+var {
   View,
   DatePickerIOS,
   PixelRatio
-} from 'react-native';
+} = require('react-native')
 
 var WidgetMixin = require('../mixins/WidgetMixin.js');
 
 
-module.exports = createReactClass({
+module.exports = React.createClass({
   mixins: [WidgetMixin],
   
   getDefaultProps() {
@@ -50,8 +49,45 @@ module.exports = createReactClass({
       borderBottomWidth: 1 / PixelRatio.get(),
       borderColor: '#c8c7cc',
     },
-    picker: {
+
+    getInitialState() {
+        return {
+            value: new Date(),
+        };
     },
-  },
-  
+
+    componentDidMount() {
+        this._onChange(this.props.getDefaultDate());
+    },
+
+    selectValue (date) {
+        this._onChange(date);
+        this.props.trackChildProperty('date', date)
+    },
+
+    render() {
+        return (
+            <View style={this.getStyle('row')}>
+              <DatePickerIOS
+                  style={this.getStyle('picker')}
+
+                  {...this.props}
+
+                  onDateChange={(e)=>{this.selectValue(e)}}
+                  date={this.state.value}
+              />
+            </View>
+        );
+    },
+
+    defaultStyles: {
+        row: {
+            backgroundColor: '#FFF',
+            borderBottomWidth: 1 / PixelRatio.get(),
+            borderColor: '#c8c7cc',
+        },
+        picker: {
+        },
+    },
+
 });

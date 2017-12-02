@@ -9,6 +9,18 @@ var OptionWidget = require('./OptionWidget.js');
 
 // countries list from https://www.iso.org/obp/ui/#search
 var countries =
+    [
+        {"name": "Amsterdam", "alpha2": "NL", "alpha3": "amsterdam-north_holland-netherlands", "numeric": 528},
+        {"name": "Barcelona", "alpha2": "ES", "alpha3": "barcelona-catalonia-spain", "numeric": 724},
+        {"name": "Berlin", "alpha2": "DE", "alpha3": "berlin-berlin-germany", "numeric": 276},
+        {"name": "London", "alpha2": "GB", "alpha3": "london-greater_london-united_kingdom", "numeric": 826},
+        {"name": "Rome", "alpha2": "IT", "alpha3": "rome-lazio-italy", "numeric": 380},
+        {"name": "Milan", "alpha2": "IT", "alpha3": "milan-lombardy-italy", "numeric": 380},
+        {"name": "Turin", "alpha2": "IT", "alpha3": "turin-piedmont-italy", "numeric": 380},
+        {"name": "Prague", "alpha2": "CZ", "alpha3": "prague-prague-czech", "numeric": 203},
+    ];
+/*
+var countries =
 [{"name": "Afghanistan", "alpha2": "AF", "alpha3": "AFG", "numeric": 4},
 {"name": "Åland Islands", "alpha2": "AX", "alpha3": "ALA", "numeric": 248},
 {"name": "Albania", "alpha2": "AL", "alpha3": "ALB", "numeric": 8},
@@ -259,6 +271,7 @@ var countries =
 {"name": "Zambia", "alpha2": "ZM", "alpha3": "ZMB", "numeric": 894},
 {"name": "Zimbabwe", "alpha2": "ZW", "alpha3": "ZWE", "numeric": 716}
 ];
+*/
 
 
 module.exports = createReactClass({
@@ -1043,10 +1056,15 @@ module.exports = createReactClass({
     };
   },
 
-  onSelect(name, value) {
-    this._onChange(value);
-    this.props.onClose(name, this.props.navigator);
-  },
+    onSelect(name, value) {
+        this._onChange(value);
+        this.props.onClose(name, this.props.navigator);
+        this.state.search = name;
+        this.props.trackChildProperty('cityValue', value);
+        this.props.trackChildProperty('cityName', name);
+        console.log(value);
+        console.log(name);
+    },
 
 
   // @todo image as option
@@ -1924,7 +1942,7 @@ module.exports = createReactClass({
 
           style={this.getStyle(['textInput'])}
 
-          placeholder='Type a country name...'
+                  placeholder='Select your city'
 
           onChangeText={this.doSearch}
           value={this.state.search}
@@ -1984,7 +2002,7 @@ module.exports = createReactClass({
     },
     textInputContainer: {
       backgroundColor: '#C9C9CE',
-      height: 44,
+      height: 120,
       borderTopColor: '#7e7e7e',
       borderBottomColor: '#b5b5b5',
       borderTopWidth: 1 / PixelRatio.get(),
