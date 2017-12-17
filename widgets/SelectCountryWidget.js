@@ -1853,7 +1853,7 @@ module.exports = createReactClass({
               }}
             />
 
-            <Text numberOfLines={1} style={{
+            <Text numberOfLines={1} style={{color:'#61616b',
               flex: 1,
             }}>{rowData.name}</Text>
           </View>
@@ -1884,7 +1884,7 @@ module.exports = createReactClass({
                 marginRight: 10,
               }}
             />
-            <Text numberOfLines={1} style={{
+            <Text numberOfLines={1} style={{color:'#61616b',
               flex: 1,
             }}>{rowData.name}</Text>
           </View>
@@ -1927,9 +1927,11 @@ module.exports = createReactClass({
 
 
   doSearch(text) {
-    // console.log(text);
     this.setState({search: text});
     this.updateRows(text);
+  },
+  componentDidMount(){
+    this.updateRows(' ');
   },
 
   renderHeader() {
@@ -1939,16 +1941,14 @@ module.exports = createReactClass({
       >
         <TextInput
           autoFocus={this.props.autoFocus}
-
+          underlineColorAndroid='transparent'
+          autoCorrect={false}
           style={this.getStyle(['textInput'])}
-
-                  placeholder='Select your city'
-
+          placeholder='Select your city'
           onChangeText={this.doSearch}
           value={this.state.search}
-
           clearButtonMode="while-editing"
-
+          selectionColor={'#ff764d'}
         />
       </View>
     );
