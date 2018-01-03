@@ -15,6 +15,7 @@ var countries =
         {"name": "Berlin", "alpha2": "DE", "alpha3": "berlin-berlin-germany", "numeric": 276},
         {"name": "London", "alpha2": "GB", "alpha3": "london-greater_london-united_kingdom", "numeric": 826},
         {"name": "Rome", "alpha2": "IT", "alpha3": "rome-lazio-italy", "numeric": 380},
+        {"name": "Krakow", "alpha2": "PL", "alpha3": "krakow-lesser_poland-poland", "numeric": 616},
         {"name": "Milan", "alpha2": "IT", "alpha3": "milan-lombardy-italy", "numeric": 380},
         {"name": "Turin", "alpha2": "IT", "alpha3": "turin-piedmont-italy", "numeric": 380},
         {"name": "Prague", "alpha2": "CZ", "alpha3": "prague-prague-czech", "numeric": 203},
