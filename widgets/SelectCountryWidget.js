@@ -13,12 +13,19 @@ var countries =
         {"name": "Amsterdam", "alpha2": "NL", "alpha3": "amsterdam-north_holland-netherlands", "numeric": 528},
         {"name": "Barcelona", "alpha2": "ES", "alpha3": "barcelona-catalonia-spain", "numeric": 724},
         {"name": "Berlin", "alpha2": "DE", "alpha3": "berlin-berlin-germany", "numeric": 276},
-        {"name": "London", "alpha2": "GB", "alpha3": "london-greater_london-united_kingdom", "numeric": 826},
-        {"name": "Rome", "alpha2": "IT", "alpha3": "rome-lazio-italy", "numeric": 380},
+        {"name": "Dublin", "alpha2": "IE", "alpha3": "dublin-leinster-ireland", "numeric": 372},
+        {"name": "Ibiza", "alpha2": "ES", "alpha3": "ibiza-balearic_islands-spain", "numeric": 724},
         {"name": "Krakow", "alpha2": "PL", "alpha3": "krakow-lesser_poland-poland", "numeric": 616},
+        {"name": "Lisbon", "alpha2": "PT", "alpha3": "lisbon-lisbon-portugal", "numeric": 620},
+        {"name": "London", "alpha2": "GB", "alpha3": "london-greater_london-united_kingdom", "numeric": 826},
         {"name": "Milan", "alpha2": "IT", "alpha3": "milan-lombardy-italy", "numeric": 380},
-        {"name": "Turin", "alpha2": "IT", "alpha3": "turin-piedmont-italy", "numeric": 380},
+        {"name": "Paris", "alpha2": "FR", "alpha3": "paris-ilede_france-france", "numeric": 250},
+        {"name": "Perugia", "alpha2": "IT", "alpha3": "perugia-umbria-italy", "numeric": 380},
         {"name": "Prague", "alpha2": "CZ", "alpha3": "prague-prague-czech", "numeric": 203},
+        {"name": "Rome", "alpha2": "IT", "alpha3": "rome-lazio-italy", "numeric": 380},
+        {"name": "Seville", "alpha2": "ES", "alpha3": "seville-andalusia-spain", "numeric": 724},
+        {"name": "Turin", "alpha2": "IT", "alpha3": "turin-piedmont-italy", "numeric": 380},
+        {"name": "Valencia", "alpha2": "ES", "alpha3": "valencia-valencia-spain", "numeric": 724},
     ];
 /*
 var countries =
