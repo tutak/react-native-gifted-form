@@ -251,6 +251,8 @@ module.exports = createReactClass({
                     return values[this.props.displayValue];
                   }
                 }
+              } else {
+                  return this.props.placeholder;
               }
             }
           }
