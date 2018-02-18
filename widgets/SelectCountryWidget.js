@@ -1,7 +1,7 @@
 import React from 'react';
 import createReactClass from 'create-react-class';
 import {
-  View, ListView, Text, TouchableHighlight, TextInput, Image, PixelRatio
+    View, ListView, Text, TouchableHighlight, TextInput, Image, PixelRatio
 } from 'react-native';
 
 var WidgetMixin = require('../mixins/WidgetMixin.js');
@@ -283,786 +283,786 @@ var countries =
 
 
 module.exports = createReactClass({
-  mixins: [WidgetMixin],
+    mixins: [WidgetMixin],
 
-  statics: {
-    getCountryNameByAlpha2(code) {
-      for (let i = 0; i < countries.length; i++) {
-        if (countries[i].alpha2 === code) {
-          return countries[i].name;
-        }
-      }
-      return '';
+    statics: {
+        getCountryNameByAlpha2(code) {
+            for (let i = 0; i < countries.length; i++) {
+                if (countries[i].alpha2 === code) {
+                    return countries[i].name;
+                }
+            }
+            return '';
+        },
+        getCountryFlagByAlpha2(code) {
+            var image = null;
+            switch (code.toLowerCase()) {
+                case 'ad':
+                    image = require('../icons/flags/flags_iso/48/ad.png');
+                    break;
+                case 'au':
+                    image = require('../icons/flags/flags_iso/48/au.png');
+                    break;
+                case 'bl':
+                    image = require('../icons/flags/flags_iso/48/bl.png');
+                    break;
+                case 'cc':
+                    image = require('../icons/flags/flags_iso/48/cc.png');
+                    break;
+                case 'cv':
+                    image = require('../icons/flags/flags_iso/48/cv.png');
+                    break;
+                case 'eg':
+                    image = require('../icons/flags/flags_iso/48/eg.png');
+                    break;
+                case 'gd':
+                    image = require('../icons/flags/flags_iso/48/gd.png');
+                    break;
+                case 'gt':
+                    image = require('../icons/flags/flags_iso/48/gt.png');
+                    break;
+                case 'im':
+                    image = require('../icons/flags/flags_iso/48/im.png');
+                    break;
+                case 'kh':
+                    image = require('../icons/flags/flags_iso/48/kh.png');
+                    break;
+                case 'lk':
+                    image = require('../icons/flags/flags_iso/48/lk.png');
+                    break;
+                case 'mh':
+                    image = require('../icons/flags/flags_iso/48/mh.png');
+                    break;
+                case 'mw':
+                    image = require('../icons/flags/flags_iso/48/mw.png');
+                    break;
+                case 'nr':
+                    image = require('../icons/flags/flags_iso/48/nr.png');
+                    break;
+                case 'pr':
+                    image = require('../icons/flags/flags_iso/48/pr.png');
+                    break;
+                case 'sc':
+                    image = require('../icons/flags/flags_iso/48/sc.png');
+                    break;
+                case 'ss':
+                    image = require('../icons/flags/flags_iso/48/ss.png');
+                    break;
+                case 'tl':
+                    image = require('../icons/flags/flags_iso/48/tl.png');
+                    break;
+                case 'uy':
+                    image = require('../icons/flags/flags_iso/48/uy.png');
+                    break;
+                case 'za':
+                    image = require('../icons/flags/flags_iso/48/za.png');
+                    break;
+                case 'ae':
+                    image = require('../icons/flags/flags_iso/48/ae.png');
+                    break;
+                case 'aw':
+                    image = require('../icons/flags/flags_iso/48/aw.png');
+                    break;
+                case 'bm':
+                    image = require('../icons/flags/flags_iso/48/bm.png');
+                    break;
+                case 'cd':
+                    image = require('../icons/flags/flags_iso/48/cd.png');
+                    break;
+                case 'cw':
+                    image = require('../icons/flags/flags_iso/48/cw.png');
+                    break;
+                case 'eh':
+                    image = require('../icons/flags/flags_iso/48/eh.png');
+                    break;
+                case 'ge':
+                    image = require('../icons/flags/flags_iso/48/ge.png');
+                    break;
+                case 'gu':
+                    image = require('../icons/flags/flags_iso/48/gu.png');
+                    break;
+                case 'in':
+                    image = require('../icons/flags/flags_iso/48/in.png');
+                    break;
+                case 'ki':
+                    image = require('../icons/flags/flags_iso/48/ki.png');
+                    break;
+                case 'lr':
+                    image = require('../icons/flags/flags_iso/48/lr.png');
+                    break;
+                case 'mk':
+                    image = require('../icons/flags/flags_iso/48/mk.png');
+                    break;
+                case 'mx':
+                    image = require('../icons/flags/flags_iso/48/mx.png');
+                    break;
+                case 'nu':
+                    image = require('../icons/flags/flags_iso/48/nu.png');
+                    break;
+                case 'ps':
+                    image = require('../icons/flags/flags_iso/48/ps.png');
+                    break;
+                case 'sd':
+                    image = require('../icons/flags/flags_iso/48/sd.png');
+                    break;
+                case 'st':
+                    image = require('../icons/flags/flags_iso/48/st.png');
+                    break;
+                case 'tm':
+                    image = require('../icons/flags/flags_iso/48/tm.png');
+                    break;
+                case 'uz':
+                    image = require('../icons/flags/flags_iso/48/uz.png');
+                    break;
+                case 'zm':
+                    image = require('../icons/flags/flags_iso/48/zm.png');
+                    break;
+                case 'af':
+                    image = require('../icons/flags/flags_iso/48/af.png');
+                    break;
+                case 'ax':
+                    image = require('../icons/flags/flags_iso/48/ax.png');
+                    break;
+                case 'bn':
+                    image = require('../icons/flags/flags_iso/48/bn.png');
+                    break;
+                case 'cf':
+                    image = require('../icons/flags/flags_iso/48/cf.png');
+                    break;
+                case 'cx':
+                    image = require('../icons/flags/flags_iso/48/cx.png');
+                    break;
+                case 'er':
+                    image = require('../icons/flags/flags_iso/48/er.png');
+                    break;
+                case 'gf':
+                    image = require('../icons/flags/flags_iso/48/gf.png');
+                    break;
+                case 'gw':
+                    image = require('../icons/flags/flags_iso/48/gw.png');
+                    break;
+                case 'io':
+                    image = require('../icons/flags/flags_iso/48/io.png');
+                    break;
+                case 'km':
+                    image = require('../icons/flags/flags_iso/48/km.png');
+                    break;
+                case 'ls':
+                    image = require('../icons/flags/flags_iso/48/ls.png');
+                    break;
+                case 'ml':
+                    image = require('../icons/flags/flags_iso/48/ml.png');
+                    break;
+                case 'my':
+                    image = require('../icons/flags/flags_iso/48/my.png');
+                    break;
+                case 'nz':
+                    image = require('../icons/flags/flags_iso/48/nz.png');
+                    break;
+                case 'pt':
+                    image = require('../icons/flags/flags_iso/48/pt.png');
+                    break;
+                case 'se':
+                    image = require('../icons/flags/flags_iso/48/se.png');
+                    break;
+                case 'sv':
+                    image = require('../icons/flags/flags_iso/48/sv.png');
+                    break;
+                case 'tn':
+                    image = require('../icons/flags/flags_iso/48/tn.png');
+                    break;
+                case 'va':
+                    image = require('../icons/flags/flags_iso/48/va.png');
+                    break;
+                case 'zw':
+                    image = require('../icons/flags/flags_iso/48/zw.png');
+                    break;
+                case 'ag':
+                    image = require('../icons/flags/flags_iso/48/ag.png');
+                    break;
+                case 'az':
+                    image = require('../icons/flags/flags_iso/48/az.png');
+                    break;
+                case 'bo':
+                    image = require('../icons/flags/flags_iso/48/bo.png');
+                    break;
+                case 'cg':
+                    image = require('../icons/flags/flags_iso/48/cg.png');
+                    break;
+                case 'cy':
+                    image = require('../icons/flags/flags_iso/48/cy.png');
+                    break;
+                case 'es':
+                    image = require('../icons/flags/flags_iso/48/es.png');
+                    break;
+                case 'gg':
+                    image = require('../icons/flags/flags_iso/48/gg.png');
+                    break;
+                case 'gy':
+                    image = require('../icons/flags/flags_iso/48/gy.png');
+                    break;
+                case 'iq':
+                    image = require('../icons/flags/flags_iso/48/iq.png');
+                    break;
+                case 'kn':
+                    image = require('../icons/flags/flags_iso/48/kn.png');
+                    break;
+                case 'lt':
+                    image = require('../icons/flags/flags_iso/48/lt.png');
+                    break;
+                case 'mm':
+                    image = require('../icons/flags/flags_iso/48/mm.png');
+                    break;
+                case 'mz':
+                    image = require('../icons/flags/flags_iso/48/mz.png');
+                    break;
+                case 'om':
+                    image = require('../icons/flags/flags_iso/48/om.png');
+                    break;
+                case 'pw':
+                    image = require('../icons/flags/flags_iso/48/pw.png');
+                    break;
+                case 'sg':
+                    image = require('../icons/flags/flags_iso/48/sg.png');
+                    break;
+                case 'sx':
+                    image = require('../icons/flags/flags_iso/48/sx.png');
+                    break;
+                case 'to':
+                    image = require('../icons/flags/flags_iso/48/to.png');
+                    break;
+                case 'vc':
+                    image = require('../icons/flags/flags_iso/48/vc.png');
+                    break;
+                case 'ai':
+                    image = require('../icons/flags/flags_iso/48/ai.png');
+                    break;
+                case 'ba':
+                    image = require('../icons/flags/flags_iso/48/ba.png');
+                    break;
+                case 'bq':
+                    image = require('../icons/flags/flags_iso/48/bq.png');
+                    break;
+                case 'ch':
+                    image = require('../icons/flags/flags_iso/48/ch.png');
+                    break;
+                case 'cz':
+                    image = require('../icons/flags/flags_iso/48/cz.png');
+                    break;
+                case 'et':
+                    image = require('../icons/flags/flags_iso/48/et.png');
+                    break;
+                case 'gh':
+                    image = require('../icons/flags/flags_iso/48/gh.png');
+                    break;
+                case 'hk':
+                    image = require('../icons/flags/flags_iso/48/hk.png');
+                    break;
+                case 'ir':
+                    image = require('../icons/flags/flags_iso/48/ir.png');
+                    break;
+                case 'kp':
+                    image = require('../icons/flags/flags_iso/48/kp.png');
+                    break;
+                case 'lu':
+                    image = require('../icons/flags/flags_iso/48/lu.png');
+                    break;
+                case 'mn':
+                    image = require('../icons/flags/flags_iso/48/mn.png');
+                    break;
+                case 'na':
+                    image = require('../icons/flags/flags_iso/48/na.png');
+                    break;
+                case 'pa':
+                    image = require('../icons/flags/flags_iso/48/pa.png');
+                    break;
+                case 'py':
+                    image = require('../icons/flags/flags_iso/48/py.png');
+                    break;
+                case 'sh':
+                    image = require('../icons/flags/flags_iso/48/sh.png');
+                    break;
+                case 'sy':
+                    image = require('../icons/flags/flags_iso/48/sy.png');
+                    break;
+                case 'tr':
+                    image = require('../icons/flags/flags_iso/48/tr.png');
+                    break;
+                case 've':
+                    image = require('../icons/flags/flags_iso/48/ve.png');
+                    break;
+                case 'al':
+                    image = require('../icons/flags/flags_iso/48/al.png');
+                    break;
+                case 'bb':
+                    image = require('../icons/flags/flags_iso/48/bb.png');
+                    break;
+                case 'br':
+                    image = require('../icons/flags/flags_iso/48/br.png');
+                    break;
+                case 'ci':
+                    image = require('../icons/flags/flags_iso/48/ci.png');
+                    break;
+                case 'de':
+                    image = require('../icons/flags/flags_iso/48/de.png');
+                    break;
+                case 'fi':
+                    image = require('../icons/flags/flags_iso/48/fi.png');
+                    break;
+                case 'gi':
+                    image = require('../icons/flags/flags_iso/48/gi.png');
+                    break;
+                case 'hm':
+                    image = require('../icons/flags/flags_iso/48/hm.png');
+                    break;
+                case 'is':
+                    image = require('../icons/flags/flags_iso/48/is.png');
+                    break;
+                case 'kr':
+                    image = require('../icons/flags/flags_iso/48/kr.png');
+                    break;
+                case 'lv':
+                    image = require('../icons/flags/flags_iso/48/lv.png');
+                    break;
+                case 'mo':
+                    image = require('../icons/flags/flags_iso/48/mo.png');
+                    break;
+                case 'nc':
+                    image = require('../icons/flags/flags_iso/48/nc.png');
+                    break;
+                case 'pe':
+                    image = require('../icons/flags/flags_iso/48/pe.png');
+                    break;
+                case 'qa':
+                    image = require('../icons/flags/flags_iso/48/qa.png');
+                    break;
+                case 'si':
+                    image = require('../icons/flags/flags_iso/48/si.png');
+                    break;
+                case 'sz':
+                    image = require('../icons/flags/flags_iso/48/sz.png');
+                    break;
+                case 'tt':
+                    image = require('../icons/flags/flags_iso/48/tt.png');
+                    break;
+                case 'vg':
+                    image = require('../icons/flags/flags_iso/48/vg.png');
+                    break;
+                case 'am':
+                    image = require('../icons/flags/flags_iso/48/am.png');
+                    break;
+                case 'bd':
+                    image = require('../icons/flags/flags_iso/48/bd.png');
+                    break;
+                case 'bs':
+                    image = require('../icons/flags/flags_iso/48/bs.png');
+                    break;
+                case 'ck':
+                    image = require('../icons/flags/flags_iso/48/ck.png');
+                    break;
+                case 'dj':
+                    image = require('../icons/flags/flags_iso/48/dj.png');
+                    break;
+                case 'fj':
+                    image = require('../icons/flags/flags_iso/48/fj.png');
+                    break;
+                case 'gl':
+                    image = require('../icons/flags/flags_iso/48/gl.png');
+                    break;
+                case 'hn':
+                    image = require('../icons/flags/flags_iso/48/hn.png');
+                    break;
+                case 'it':
+                    image = require('../icons/flags/flags_iso/48/it.png');
+                    break;
+                case 'kw':
+                    image = require('../icons/flags/flags_iso/48/kw.png');
+                    break;
+                case 'ly':
+                    image = require('../icons/flags/flags_iso/48/ly.png');
+                    break;
+                case 'mp':
+                    image = require('../icons/flags/flags_iso/48/mp.png');
+                    break;
+                case 'ne':
+                    image = require('../icons/flags/flags_iso/48/ne.png');
+                    break;
+                case 'pf':
+                    image = require('../icons/flags/flags_iso/48/pf.png');
+                    break;
+                case 're':
+                    image = require('../icons/flags/flags_iso/48/re.png');
+                    break;
+                case 'sj':
+                    image = require('../icons/flags/flags_iso/48/sj.png');
+                    break;
+                case 'tc':
+                    image = require('../icons/flags/flags_iso/48/tc.png');
+                    break;
+                case 'tv':
+                    image = require('../icons/flags/flags_iso/48/tv.png');
+                    break;
+                case 'vi':
+                    image = require('../icons/flags/flags_iso/48/vi.png');
+                    break;
+                case 'an':
+                    image = require('../icons/flags/flags_iso/48/an.png');
+                    break;
+                case 'be':
+                    image = require('../icons/flags/flags_iso/48/be.png');
+                    break;
+                case 'bt':
+                    image = require('../icons/flags/flags_iso/48/bt.png');
+                    break;
+                case 'cl':
+                    image = require('../icons/flags/flags_iso/48/cl.png');
+                    break;
+                case 'dk':
+                    image = require('../icons/flags/flags_iso/48/dk.png');
+                    break;
+                case 'fk':
+                    image = require('../icons/flags/flags_iso/48/fk.png');
+                    break;
+                case 'gm':
+                    image = require('../icons/flags/flags_iso/48/gm.png');
+                    break;
+                case 'hr':
+                    image = require('../icons/flags/flags_iso/48/hr.png');
+                    break;
+                case 'je':
+                    image = require('../icons/flags/flags_iso/48/je.png');
+                    break;
+                case 'ky':
+                    image = require('../icons/flags/flags_iso/48/ky.png');
+                    break;
+                case 'ma':
+                    image = require('../icons/flags/flags_iso/48/ma.png');
+                    break;
+                case 'mq':
+                    image = require('../icons/flags/flags_iso/48/mq.png');
+                    break;
+                case 'nf':
+                    image = require('../icons/flags/flags_iso/48/nf.png');
+                    break;
+                case 'pg':
+                    image = require('../icons/flags/flags_iso/48/pg.png');
+                    break;
+                case 'ro':
+                    image = require('../icons/flags/flags_iso/48/ro.png');
+                    break;
+                case 'sk':
+                    image = require('../icons/flags/flags_iso/48/sk.png');
+                    break;
+                case 'td':
+                    image = require('../icons/flags/flags_iso/48/td.png');
+                    break;
+                case 'tw':
+                    image = require('../icons/flags/flags_iso/48/tw.png');
+                    break;
+                case 'vn':
+                    image = require('../icons/flags/flags_iso/48/vn.png');
+                    break;
+                case 'ao':
+                    image = require('../icons/flags/flags_iso/48/ao.png');
+                    break;
+                case 'bf':
+                    image = require('../icons/flags/flags_iso/48/bf.png');
+                    break;
+                case 'bv':
+                    image = require('../icons/flags/flags_iso/48/bv.png');
+                    break;
+                case 'cm':
+                    image = require('../icons/flags/flags_iso/48/cm.png');
+                    break;
+                case 'dm':
+                    image = require('../icons/flags/flags_iso/48/dm.png');
+                    break;
+                case 'fm':
+                    image = require('../icons/flags/flags_iso/48/fm.png');
+                    break;
+                case 'gn':
+                    image = require('../icons/flags/flags_iso/48/gn.png');
+                    break;
+                case 'ht':
+                    image = require('../icons/flags/flags_iso/48/ht.png');
+                    break;
+                case 'jm':
+                    image = require('../icons/flags/flags_iso/48/jm.png');
+                    break;
+                case 'kz':
+                    image = require('../icons/flags/flags_iso/48/kz.png');
+                    break;
+                case 'mc':
+                    image = require('../icons/flags/flags_iso/48/mc.png');
+                    break;
+                case 'mr':
+                    image = require('../icons/flags/flags_iso/48/mr.png');
+                    break;
+                case 'ng':
+                    image = require('../icons/flags/flags_iso/48/ng.png');
+                    break;
+                case 'ph':
+                    image = require('../icons/flags/flags_iso/48/ph.png');
+                    break;
+                case 'rs':
+                    image = require('../icons/flags/flags_iso/48/rs.png');
+                    break;
+                case 'sl':
+                    image = require('../icons/flags/flags_iso/48/sl.png');
+                    break;
+                case 'tf':
+                    image = require('../icons/flags/flags_iso/48/tf.png');
+                    break;
+                case 'tz':
+                    image = require('../icons/flags/flags_iso/48/tz.png');
+                    break;
+                case 'vu':
+                    image = require('../icons/flags/flags_iso/48/vu.png');
+                    break;
+                case 'aq':
+                    image = require('../icons/flags/flags_iso/48/aq.png');
+                    break;
+                case 'bg':
+                    image = require('../icons/flags/flags_iso/48/bg.png');
+                    break;
+                case 'bw':
+                    image = require('../icons/flags/flags_iso/48/bw.png');
+                    break;
+                case 'cn':
+                    image = require('../icons/flags/flags_iso/48/cn.png');
+                    break;
+                case 'do':
+                    image = require('../icons/flags/flags_iso/48/do.png');
+                    break;
+                case 'fo':
+                    image = require('../icons/flags/flags_iso/48/fo.png');
+                    break;
+                case 'gp':
+                    image = require('../icons/flags/flags_iso/48/gp.png');
+                    break;
+                case 'hu':
+                    image = require('../icons/flags/flags_iso/48/hu.png');
+                    break;
+                case 'jo':
+                    image = require('../icons/flags/flags_iso/48/jo.png');
+                    break;
+                case 'la':
+                    image = require('../icons/flags/flags_iso/48/la.png');
+                    break;
+                case 'md':
+                    image = require('../icons/flags/flags_iso/48/md.png');
+                    break;
+                case 'ms':
+                    image = require('../icons/flags/flags_iso/48/ms.png');
+                    break;
+                case 'ni':
+                    image = require('../icons/flags/flags_iso/48/ni.png');
+                    break;
+                case 'pk':
+                    image = require('../icons/flags/flags_iso/48/pk.png');
+                    break;
+                case 'ru':
+                    image = require('../icons/flags/flags_iso/48/ru.png');
+                    break;
+                case 'sm':
+                    image = require('../icons/flags/flags_iso/48/sm.png');
+                    break;
+                case 'tg':
+                    image = require('../icons/flags/flags_iso/48/tg.png');
+                    break;
+                case 'ua':
+                    image = require('../icons/flags/flags_iso/48/ua.png');
+                    break;
+                case 'wf':
+                    image = require('../icons/flags/flags_iso/48/wf.png');
+                    break;
+                case 'ar':
+                    image = require('../icons/flags/flags_iso/48/ar.png');
+                    break;
+                case 'bh':
+                    image = require('../icons/flags/flags_iso/48/bh.png');
+                    break;
+                case 'by':
+                    image = require('../icons/flags/flags_iso/48/by.png');
+                    break;
+                case 'co':
+                    image = require('../icons/flags/flags_iso/48/co.png');
+                    break;
+                case 'dz':
+                    image = require('../icons/flags/flags_iso/48/dz.png');
+                    break;
+                case 'fr':
+                    image = require('../icons/flags/flags_iso/48/fr.png');
+                    break;
+                case 'gq':
+                    image = require('../icons/flags/flags_iso/48/gq.png');
+                    break;
+                case 'id':
+                    image = require('../icons/flags/flags_iso/48/id.png');
+                    break;
+                case 'jp':
+                    image = require('../icons/flags/flags_iso/48/jp.png');
+                    break;
+                case 'lb':
+                    image = require('../icons/flags/flags_iso/48/lb.png');
+                    break;
+                case 'me':
+                    image = require('../icons/flags/flags_iso/48/me.png');
+                    break;
+                case 'mt':
+                    image = require('../icons/flags/flags_iso/48/mt.png');
+                    break;
+                case 'nl':
+                    image = require('../icons/flags/flags_iso/48/nl.png');
+                    break;
+                case 'pl':
+                    image = require('../icons/flags/flags_iso/48/pl.png');
+                    break;
+                case 'rw':
+                    image = require('../icons/flags/flags_iso/48/rw.png');
+                    break;
+                case 'sn':
+                    image = require('../icons/flags/flags_iso/48/sn.png');
+                    break;
+                case 'th':
+                    image = require('../icons/flags/flags_iso/48/th.png');
+                    break;
+                case 'ug':
+                    image = require('../icons/flags/flags_iso/48/ug.png');
+                    break;
+                case 'ws':
+                    image = require('../icons/flags/flags_iso/48/ws.png');
+                    break;
+                case 'as':
+                    image = require('../icons/flags/flags_iso/48/as.png');
+                    break;
+                case 'bi':
+                    image = require('../icons/flags/flags_iso/48/bi.png');
+                    break;
+                case 'bz':
+                    image = require('../icons/flags/flags_iso/48/bz.png');
+                    break;
+                case 'cr':
+                    image = require('../icons/flags/flags_iso/48/cr.png');
+                    break;
+                case 'ec':
+                    image = require('../icons/flags/flags_iso/48/ec.png');
+                    break;
+                case 'ga':
+                    image = require('../icons/flags/flags_iso/48/ga.png');
+                    break;
+                case 'gr':
+                    image = require('../icons/flags/flags_iso/48/gr.png');
+                    break;
+                case 'ie':
+                    image = require('../icons/flags/flags_iso/48/ie.png');
+                    break;
+                case 'ke':
+                    image = require('../icons/flags/flags_iso/48/ke.png');
+                    break;
+                case 'lc':
+                    image = require('../icons/flags/flags_iso/48/lc.png');
+                    break;
+                case 'mf':
+                    image = require('../icons/flags/flags_iso/48/mf.png');
+                    break;
+                case 'mu':
+                    image = require('../icons/flags/flags_iso/48/mu.png');
+                    break;
+                case 'no':
+                    image = require('../icons/flags/flags_iso/48/no.png');
+                    break;
+                case 'pm':
+                    image = require('../icons/flags/flags_iso/48/pm.png');
+                    break;
+                case 'sa':
+                    image = require('../icons/flags/flags_iso/48/sa.png');
+                    break;
+                case 'so':
+                    image = require('../icons/flags/flags_iso/48/so.png');
+                    break;
+                case 'tj':
+                    image = require('../icons/flags/flags_iso/48/tj.png');
+                    break;
+                case 'um':
+                    image = require('../icons/flags/flags_iso/48/um.png');
+                    break;
+                case 'ye':
+                    image = require('../icons/flags/flags_iso/48/ye.png');
+                    break;
+                case 'at':
+                    image = require('../icons/flags/flags_iso/48/at.png');
+                    break;
+                case 'bj':
+                    image = require('../icons/flags/flags_iso/48/bj.png');
+                    break;
+                case 'ca':
+                    image = require('../icons/flags/flags_iso/48/ca.png');
+                    break;
+                case 'cu':
+                    image = require('../icons/flags/flags_iso/48/cu.png');
+                    break;
+                case 'ee':
+                    image = require('../icons/flags/flags_iso/48/ee.png');
+                    break;
+                case 'gb':
+                    image = require('../icons/flags/flags_iso/48/gb.png');
+                    break;
+                case 'gs':
+                    image = require('../icons/flags/flags_iso/48/gs.png');
+                    break;
+                case 'il':
+                    image = require('../icons/flags/flags_iso/48/il.png');
+                    break;
+                case 'kg':
+                    image = require('../icons/flags/flags_iso/48/kg.png');
+                    break;
+                case 'li':
+                    image = require('../icons/flags/flags_iso/48/li.png');
+                    break;
+                case 'mg':
+                    image = require('../icons/flags/flags_iso/48/mg.png');
+                    break;
+                case 'mv':
+                    image = require('../icons/flags/flags_iso/48/mv.png');
+                    break;
+                case 'np':
+                    image = require('../icons/flags/flags_iso/48/np.png');
+                    break;
+                case 'pn':
+                    image = require('../icons/flags/flags_iso/48/pn.png');
+                    break;
+                case 'sb':
+                    image = require('../icons/flags/flags_iso/48/sb.png');
+                    break;
+                case 'sr':
+                    image = require('../icons/flags/flags_iso/48/sr.png');
+                    break;
+                case 'tk':
+                    image = require('../icons/flags/flags_iso/48/tk.png');
+                    break;
+                case 'us':
+                    image = require('../icons/flags/flags_iso/48/us.png');
+                    break;
+                case 'yt':
+                    image = require('../icons/flags/flags_iso/48/yt.png');
+                    break;
+                default:
+                    image = null;
+            }
+
+            return image;
+        },
     },
-    getCountryFlagByAlpha2(code) {
-      var image = null;
-      switch (code.toLowerCase()) {
-        case 'ad':
-          image = require('../icons/flags/flags_iso/48/ad.png');
-          break;
-        case 'au':
-          image = require('../icons/flags/flags_iso/48/au.png');
-          break;
-        case 'bl':
-          image = require('../icons/flags/flags_iso/48/bl.png');
-          break;
-        case 'cc':
-          image = require('../icons/flags/flags_iso/48/cc.png');
-          break;
-        case 'cv':
-          image = require('../icons/flags/flags_iso/48/cv.png');
-          break;
-        case 'eg':
-          image = require('../icons/flags/flags_iso/48/eg.png');
-          break;
-        case 'gd':
-          image = require('../icons/flags/flags_iso/48/gd.png');
-          break;
-        case 'gt':
-          image = require('../icons/flags/flags_iso/48/gt.png');
-          break;
-        case 'im':
-          image = require('../icons/flags/flags_iso/48/im.png');
-          break;
-        case 'kh':
-          image = require('../icons/flags/flags_iso/48/kh.png');
-          break;
-        case 'lk':
-          image = require('../icons/flags/flags_iso/48/lk.png');
-          break;
-        case 'mh':
-          image = require('../icons/flags/flags_iso/48/mh.png');
-          break;
-        case 'mw':
-          image = require('../icons/flags/flags_iso/48/mw.png');
-          break;
-        case 'nr':
-          image = require('../icons/flags/flags_iso/48/nr.png');
-          break;
-        case 'pr':
-          image = require('../icons/flags/flags_iso/48/pr.png');
-          break;
-        case 'sc':
-          image = require('../icons/flags/flags_iso/48/sc.png');
-          break;
-        case 'ss':
-          image = require('../icons/flags/flags_iso/48/ss.png');
-          break;
-        case 'tl':
-          image = require('../icons/flags/flags_iso/48/tl.png');
-          break;
-        case 'uy':
-          image = require('../icons/flags/flags_iso/48/uy.png');
-          break;
-        case 'za':
-          image = require('../icons/flags/flags_iso/48/za.png');
-          break;
-        case 'ae':
-          image = require('../icons/flags/flags_iso/48/ae.png');
-          break;
-        case 'aw':
-          image = require('../icons/flags/flags_iso/48/aw.png');
-          break;
-        case 'bm':
-          image = require('../icons/flags/flags_iso/48/bm.png');
-          break;
-        case 'cd':
-          image = require('../icons/flags/flags_iso/48/cd.png');
-          break;
-        case 'cw':
-          image = require('../icons/flags/flags_iso/48/cw.png');
-          break;
-        case 'eh':
-          image = require('../icons/flags/flags_iso/48/eh.png');
-          break;
-        case 'ge':
-          image = require('../icons/flags/flags_iso/48/ge.png');
-          break;
-        case 'gu':
-          image = require('../icons/flags/flags_iso/48/gu.png');
-          break;
-        case 'in':
-          image = require('../icons/flags/flags_iso/48/in.png');
-          break;
-        case 'ki':
-          image = require('../icons/flags/flags_iso/48/ki.png');
-          break;
-        case 'lr':
-          image = require('../icons/flags/flags_iso/48/lr.png');
-          break;
-        case 'mk':
-          image = require('../icons/flags/flags_iso/48/mk.png');
-          break;
-        case 'mx':
-          image = require('../icons/flags/flags_iso/48/mx.png');
-          break;
-        case 'nu':
-          image = require('../icons/flags/flags_iso/48/nu.png');
-          break;
-        case 'ps':
-          image = require('../icons/flags/flags_iso/48/ps.png');
-          break;
-        case 'sd':
-          image = require('../icons/flags/flags_iso/48/sd.png');
-          break;
-        case 'st':
-          image = require('../icons/flags/flags_iso/48/st.png');
-          break;
-        case 'tm':
-          image = require('../icons/flags/flags_iso/48/tm.png');
-          break;
-        case 'uz':
-          image = require('../icons/flags/flags_iso/48/uz.png');
-          break;
-        case 'zm':
-          image = require('../icons/flags/flags_iso/48/zm.png');
-          break;
-        case 'af':
-          image = require('../icons/flags/flags_iso/48/af.png');
-          break;
-        case 'ax':
-          image = require('../icons/flags/flags_iso/48/ax.png');
-          break;
-        case 'bn':
-          image = require('../icons/flags/flags_iso/48/bn.png');
-          break;
-        case 'cf':
-          image = require('../icons/flags/flags_iso/48/cf.png');
-          break;
-        case 'cx':
-          image = require('../icons/flags/flags_iso/48/cx.png');
-          break;
-        case 'er':
-          image = require('../icons/flags/flags_iso/48/er.png');
-          break;
-        case 'gf':
-          image = require('../icons/flags/flags_iso/48/gf.png');
-          break;
-        case 'gw':
-          image = require('../icons/flags/flags_iso/48/gw.png');
-          break;
-        case 'io':
-          image = require('../icons/flags/flags_iso/48/io.png');
-          break;
-        case 'km':
-          image = require('../icons/flags/flags_iso/48/km.png');
-          break;
-        case 'ls':
-          image = require('../icons/flags/flags_iso/48/ls.png');
-          break;
-        case 'ml':
-          image = require('../icons/flags/flags_iso/48/ml.png');
-          break;
-        case 'my':
-          image = require('../icons/flags/flags_iso/48/my.png');
-          break;
-        case 'nz':
-          image = require('../icons/flags/flags_iso/48/nz.png');
-          break;
-        case 'pt':
-          image = require('../icons/flags/flags_iso/48/pt.png');
-          break;
-        case 'se':
-          image = require('../icons/flags/flags_iso/48/se.png');
-          break;
-        case 'sv':
-          image = require('../icons/flags/flags_iso/48/sv.png');
-          break;
-        case 'tn':
-          image = require('../icons/flags/flags_iso/48/tn.png');
-          break;
-        case 'va':
-          image = require('../icons/flags/flags_iso/48/va.png');
-          break;
-        case 'zw':
-          image = require('../icons/flags/flags_iso/48/zw.png');
-          break;
-        case 'ag':
-          image = require('../icons/flags/flags_iso/48/ag.png');
-          break;
-        case 'az':
-          image = require('../icons/flags/flags_iso/48/az.png');
-          break;
-        case 'bo':
-          image = require('../icons/flags/flags_iso/48/bo.png');
-          break;
-        case 'cg':
-          image = require('../icons/flags/flags_iso/48/cg.png');
-          break;
-        case 'cy':
-          image = require('../icons/flags/flags_iso/48/cy.png');
-          break;
-        case 'es':
-          image = require('../icons/flags/flags_iso/48/es.png');
-          break;
-        case 'gg':
-          image = require('../icons/flags/flags_iso/48/gg.png');
-          break;
-        case 'gy':
-          image = require('../icons/flags/flags_iso/48/gy.png');
-          break;
-        case 'iq':
-          image = require('../icons/flags/flags_iso/48/iq.png');
-          break;
-        case 'kn':
-          image = require('../icons/flags/flags_iso/48/kn.png');
-          break;
-        case 'lt':
-          image = require('../icons/flags/flags_iso/48/lt.png');
-          break;
-        case 'mm':
-          image = require('../icons/flags/flags_iso/48/mm.png');
-          break;
-        case 'mz':
-          image = require('../icons/flags/flags_iso/48/mz.png');
-          break;
-        case 'om':
-          image = require('../icons/flags/flags_iso/48/om.png');
-          break;
-        case 'pw':
-          image = require('../icons/flags/flags_iso/48/pw.png');
-          break;
-        case 'sg':
-          image = require('../icons/flags/flags_iso/48/sg.png');
-          break;
-        case 'sx':
-          image = require('../icons/flags/flags_iso/48/sx.png');
-          break;
-        case 'to':
-          image = require('../icons/flags/flags_iso/48/to.png');
-          break;
-        case 'vc':
-          image = require('../icons/flags/flags_iso/48/vc.png');
-          break;
-        case 'ai':
-          image = require('../icons/flags/flags_iso/48/ai.png');
-          break;
-        case 'ba':
-          image = require('../icons/flags/flags_iso/48/ba.png');
-          break;
-        case 'bq':
-          image = require('../icons/flags/flags_iso/48/bq.png');
-          break;
-        case 'ch':
-          image = require('../icons/flags/flags_iso/48/ch.png');
-          break;
-        case 'cz':
-          image = require('../icons/flags/flags_iso/48/cz.png');
-          break;
-        case 'et':
-          image = require('../icons/flags/flags_iso/48/et.png');
-          break;
-        case 'gh':
-          image = require('../icons/flags/flags_iso/48/gh.png');
-          break;
-        case 'hk':
-          image = require('../icons/flags/flags_iso/48/hk.png');
-          break;
-        case 'ir':
-          image = require('../icons/flags/flags_iso/48/ir.png');
-          break;
-        case 'kp':
-          image = require('../icons/flags/flags_iso/48/kp.png');
-          break;
-        case 'lu':
-          image = require('../icons/flags/flags_iso/48/lu.png');
-          break;
-        case 'mn':
-          image = require('../icons/flags/flags_iso/48/mn.png');
-          break;
-        case 'na':
-          image = require('../icons/flags/flags_iso/48/na.png');
-          break;
-        case 'pa':
-          image = require('../icons/flags/flags_iso/48/pa.png');
-          break;
-        case 'py':
-          image = require('../icons/flags/flags_iso/48/py.png');
-          break;
-        case 'sh':
-          image = require('../icons/flags/flags_iso/48/sh.png');
-          break;
-        case 'sy':
-          image = require('../icons/flags/flags_iso/48/sy.png');
-          break;
-        case 'tr':
-          image = require('../icons/flags/flags_iso/48/tr.png');
-          break;
-        case 've':
-          image = require('../icons/flags/flags_iso/48/ve.png');
-          break;
-        case 'al':
-          image = require('../icons/flags/flags_iso/48/al.png');
-          break;
-        case 'bb':
-          image = require('../icons/flags/flags_iso/48/bb.png');
-          break;
-        case 'br':
-          image = require('../icons/flags/flags_iso/48/br.png');
-          break;
-        case 'ci':
-          image = require('../icons/flags/flags_iso/48/ci.png');
-          break;
-        case 'de':
-          image = require('../icons/flags/flags_iso/48/de.png');
-          break;
-        case 'fi':
-          image = require('../icons/flags/flags_iso/48/fi.png');
-          break;
-        case 'gi':
-          image = require('../icons/flags/flags_iso/48/gi.png');
-          break;
-        case 'hm':
-          image = require('../icons/flags/flags_iso/48/hm.png');
-          break;
-        case 'is':
-          image = require('../icons/flags/flags_iso/48/is.png');
-          break;
-        case 'kr':
-          image = require('../icons/flags/flags_iso/48/kr.png');
-          break;
-        case 'lv':
-          image = require('../icons/flags/flags_iso/48/lv.png');
-          break;
-        case 'mo':
-          image = require('../icons/flags/flags_iso/48/mo.png');
-          break;
-        case 'nc':
-          image = require('../icons/flags/flags_iso/48/nc.png');
-          break;
-        case 'pe':
-          image = require('../icons/flags/flags_iso/48/pe.png');
-          break;
-        case 'qa':
-          image = require('../icons/flags/flags_iso/48/qa.png');
-          break;
-        case 'si':
-          image = require('../icons/flags/flags_iso/48/si.png');
-          break;
-        case 'sz':
-          image = require('../icons/flags/flags_iso/48/sz.png');
-          break;
-        case 'tt':
-          image = require('../icons/flags/flags_iso/48/tt.png');
-          break;
-        case 'vg':
-          image = require('../icons/flags/flags_iso/48/vg.png');
-          break;
-        case 'am':
-          image = require('../icons/flags/flags_iso/48/am.png');
-          break;
-        case 'bd':
-          image = require('../icons/flags/flags_iso/48/bd.png');
-          break;
-        case 'bs':
-          image = require('../icons/flags/flags_iso/48/bs.png');
-          break;
-        case 'ck':
-          image = require('../icons/flags/flags_iso/48/ck.png');
-          break;
-        case 'dj':
-          image = require('../icons/flags/flags_iso/48/dj.png');
-          break;
-        case 'fj':
-          image = require('../icons/flags/flags_iso/48/fj.png');
-          break;
-        case 'gl':
-          image = require('../icons/flags/flags_iso/48/gl.png');
-          break;
-        case 'hn':
-          image = require('../icons/flags/flags_iso/48/hn.png');
-          break;
-        case 'it':
-          image = require('../icons/flags/flags_iso/48/it.png');
-          break;
-        case 'kw':
-          image = require('../icons/flags/flags_iso/48/kw.png');
-          break;
-        case 'ly':
-          image = require('../icons/flags/flags_iso/48/ly.png');
-          break;
-        case 'mp':
-          image = require('../icons/flags/flags_iso/48/mp.png');
-          break;
-        case 'ne':
-          image = require('../icons/flags/flags_iso/48/ne.png');
-          break;
-        case 'pf':
-          image = require('../icons/flags/flags_iso/48/pf.png');
-          break;
-        case 're':
-          image = require('../icons/flags/flags_iso/48/re.png');
-          break;
-        case 'sj':
-          image = require('../icons/flags/flags_iso/48/sj.png');
-          break;
-        case 'tc':
-          image = require('../icons/flags/flags_iso/48/tc.png');
-          break;
-        case 'tv':
-          image = require('../icons/flags/flags_iso/48/tv.png');
-          break;
-        case 'vi':
-          image = require('../icons/flags/flags_iso/48/vi.png');
-          break;
-        case 'an':
-          image = require('../icons/flags/flags_iso/48/an.png');
-          break;
-        case 'be':
-          image = require('../icons/flags/flags_iso/48/be.png');
-          break;
-        case 'bt':
-          image = require('../icons/flags/flags_iso/48/bt.png');
-          break;
-        case 'cl':
-          image = require('../icons/flags/flags_iso/48/cl.png');
-          break;
-        case 'dk':
-          image = require('../icons/flags/flags_iso/48/dk.png');
-          break;
-        case 'fk':
-          image = require('../icons/flags/flags_iso/48/fk.png');
-          break;
-        case 'gm':
-          image = require('../icons/flags/flags_iso/48/gm.png');
-          break;
-        case 'hr':
-          image = require('../icons/flags/flags_iso/48/hr.png');
-          break;
-        case 'je':
-          image = require('../icons/flags/flags_iso/48/je.png');
-          break;
-        case 'ky':
-          image = require('../icons/flags/flags_iso/48/ky.png');
-          break;
-        case 'ma':
-          image = require('../icons/flags/flags_iso/48/ma.png');
-          break;
-        case 'mq':
-          image = require('../icons/flags/flags_iso/48/mq.png');
-          break;
-        case 'nf':
-          image = require('../icons/flags/flags_iso/48/nf.png');
-          break;
-        case 'pg':
-          image = require('../icons/flags/flags_iso/48/pg.png');
-          break;
-        case 'ro':
-          image = require('../icons/flags/flags_iso/48/ro.png');
-          break;
-        case 'sk':
-          image = require('../icons/flags/flags_iso/48/sk.png');
-          break;
-        case 'td':
-          image = require('../icons/flags/flags_iso/48/td.png');
-          break;
-        case 'tw':
-          image = require('../icons/flags/flags_iso/48/tw.png');
-          break;
-        case 'vn':
-          image = require('../icons/flags/flags_iso/48/vn.png');
-          break;
-        case 'ao':
-          image = require('../icons/flags/flags_iso/48/ao.png');
-          break;
-        case 'bf':
-          image = require('../icons/flags/flags_iso/48/bf.png');
-          break;
-        case 'bv':
-          image = require('../icons/flags/flags_iso/48/bv.png');
-          break;
-        case 'cm':
-          image = require('../icons/flags/flags_iso/48/cm.png');
-          break;
-        case 'dm':
-          image = require('../icons/flags/flags_iso/48/dm.png');
-          break;
-        case 'fm':
-          image = require('../icons/flags/flags_iso/48/fm.png');
-          break;
-        case 'gn':
-          image = require('../icons/flags/flags_iso/48/gn.png');
-          break;
-        case 'ht':
-          image = require('../icons/flags/flags_iso/48/ht.png');
-          break;
-        case 'jm':
-          image = require('../icons/flags/flags_iso/48/jm.png');
-          break;
-        case 'kz':
-          image = require('../icons/flags/flags_iso/48/kz.png');
-          break;
-        case 'mc':
-          image = require('../icons/flags/flags_iso/48/mc.png');
-          break;
-        case 'mr':
-          image = require('../icons/flags/flags_iso/48/mr.png');
-          break;
-        case 'ng':
-          image = require('../icons/flags/flags_iso/48/ng.png');
-          break;
-        case 'ph':
-          image = require('../icons/flags/flags_iso/48/ph.png');
-          break;
-        case 'rs':
-          image = require('../icons/flags/flags_iso/48/rs.png');
-          break;
-        case 'sl':
-          image = require('../icons/flags/flags_iso/48/sl.png');
-          break;
-        case 'tf':
-          image = require('../icons/flags/flags_iso/48/tf.png');
-          break;
-        case 'tz':
-          image = require('../icons/flags/flags_iso/48/tz.png');
-          break;
-        case 'vu':
-          image = require('../icons/flags/flags_iso/48/vu.png');
-          break;
-        case 'aq':
-          image = require('../icons/flags/flags_iso/48/aq.png');
-          break;
-        case 'bg':
-          image = require('../icons/flags/flags_iso/48/bg.png');
-          break;
-        case 'bw':
-          image = require('../icons/flags/flags_iso/48/bw.png');
-          break;
-        case 'cn':
-          image = require('../icons/flags/flags_iso/48/cn.png');
-          break;
-        case 'do':
-          image = require('../icons/flags/flags_iso/48/do.png');
-          break;
-        case 'fo':
-          image = require('../icons/flags/flags_iso/48/fo.png');
-          break;
-        case 'gp':
-          image = require('../icons/flags/flags_iso/48/gp.png');
-          break;
-        case 'hu':
-          image = require('../icons/flags/flags_iso/48/hu.png');
-          break;
-        case 'jo':
-          image = require('../icons/flags/flags_iso/48/jo.png');
-          break;
-        case 'la':
-          image = require('../icons/flags/flags_iso/48/la.png');
-          break;
-        case 'md':
-          image = require('../icons/flags/flags_iso/48/md.png');
-          break;
-        case 'ms':
-          image = require('../icons/flags/flags_iso/48/ms.png');
-          break;
-        case 'ni':
-          image = require('../icons/flags/flags_iso/48/ni.png');
-          break;
-        case 'pk':
-          image = require('../icons/flags/flags_iso/48/pk.png');
-          break;
-        case 'ru':
-          image = require('../icons/flags/flags_iso/48/ru.png');
-          break;
-        case 'sm':
-          image = require('../icons/flags/flags_iso/48/sm.png');
-          break;
-        case 'tg':
-          image = require('../icons/flags/flags_iso/48/tg.png');
-          break;
-        case 'ua':
-          image = require('../icons/flags/flags_iso/48/ua.png');
-          break;
-        case 'wf':
-          image = require('../icons/flags/flags_iso/48/wf.png');
-          break;
-        case 'ar':
-          image = require('../icons/flags/flags_iso/48/ar.png');
-          break;
-        case 'bh':
-          image = require('../icons/flags/flags_iso/48/bh.png');
-          break;
-        case 'by':
-          image = require('../icons/flags/flags_iso/48/by.png');
-          break;
-        case 'co':
-          image = require('../icons/flags/flags_iso/48/co.png');
-          break;
-        case 'dz':
-          image = require('../icons/flags/flags_iso/48/dz.png');
-          break;
-        case 'fr':
-          image = require('../icons/flags/flags_iso/48/fr.png');
-          break;
-        case 'gq':
-          image = require('../icons/flags/flags_iso/48/gq.png');
-          break;
-        case 'id':
-          image = require('../icons/flags/flags_iso/48/id.png');
-          break;
-        case 'jp':
-          image = require('../icons/flags/flags_iso/48/jp.png');
-          break;
-        case 'lb':
-          image = require('../icons/flags/flags_iso/48/lb.png');
-          break;
-        case 'me':
-          image = require('../icons/flags/flags_iso/48/me.png');
-          break;
-        case 'mt':
-          image = require('../icons/flags/flags_iso/48/mt.png');
-          break;
-        case 'nl':
-          image = require('../icons/flags/flags_iso/48/nl.png');
-          break;
-        case 'pl':
-          image = require('../icons/flags/flags_iso/48/pl.png');
-          break;
-        case 'rw':
-          image = require('../icons/flags/flags_iso/48/rw.png');
-          break;
-        case 'sn':
-          image = require('../icons/flags/flags_iso/48/sn.png');
-          break;
-        case 'th':
-          image = require('../icons/flags/flags_iso/48/th.png');
-          break;
-        case 'ug':
-          image = require('../icons/flags/flags_iso/48/ug.png');
-          break;
-        case 'ws':
-          image = require('../icons/flags/flags_iso/48/ws.png');
-          break;
-        case 'as':
-          image = require('../icons/flags/flags_iso/48/as.png');
-          break;
-        case 'bi':
-          image = require('../icons/flags/flags_iso/48/bi.png');
-          break;
-        case 'bz':
-          image = require('../icons/flags/flags_iso/48/bz.png');
-          break;
-        case 'cr':
-          image = require('../icons/flags/flags_iso/48/cr.png');
-          break;
-        case 'ec':
-          image = require('../icons/flags/flags_iso/48/ec.png');
-          break;
-        case 'ga':
-          image = require('../icons/flags/flags_iso/48/ga.png');
-          break;
-        case 'gr':
-          image = require('../icons/flags/flags_iso/48/gr.png');
-          break;
-        case 'ie':
-          image = require('../icons/flags/flags_iso/48/ie.png');
-          break;
-        case 'ke':
-          image = require('../icons/flags/flags_iso/48/ke.png');
-          break;
-        case 'lc':
-          image = require('../icons/flags/flags_iso/48/lc.png');
-          break;
-        case 'mf':
-          image = require('../icons/flags/flags_iso/48/mf.png');
-          break;
-        case 'mu':
-          image = require('../icons/flags/flags_iso/48/mu.png');
-          break;
-        case 'no':
-          image = require('../icons/flags/flags_iso/48/no.png');
-          break;
-        case 'pm':
-          image = require('../icons/flags/flags_iso/48/pm.png');
-          break;
-        case 'sa':
-          image = require('../icons/flags/flags_iso/48/sa.png');
-          break;
-        case 'so':
-          image = require('../icons/flags/flags_iso/48/so.png');
-          break;
-        case 'tj':
-          image = require('../icons/flags/flags_iso/48/tj.png');
-          break;
-        case 'um':
-          image = require('../icons/flags/flags_iso/48/um.png');
-          break;
-        case 'ye':
-          image = require('../icons/flags/flags_iso/48/ye.png');
-          break;
-        case 'at':
-          image = require('../icons/flags/flags_iso/48/at.png');
-          break;
-        case 'bj':
-          image = require('../icons/flags/flags_iso/48/bj.png');
-          break;
-        case 'ca':
-          image = require('../icons/flags/flags_iso/48/ca.png');
-          break;
-        case 'cu':
-          image = require('../icons/flags/flags_iso/48/cu.png');
-          break;
-        case 'ee':
-          image = require('../icons/flags/flags_iso/48/ee.png');
-          break;
-        case 'gb':
-          image = require('../icons/flags/flags_iso/48/gb.png');
-          break;
-        case 'gs':
-          image = require('../icons/flags/flags_iso/48/gs.png');
-          break;
-        case 'il':
-          image = require('../icons/flags/flags_iso/48/il.png');
-          break;
-        case 'kg':
-          image = require('../icons/flags/flags_iso/48/kg.png');
-          break;
-        case 'li':
-          image = require('../icons/flags/flags_iso/48/li.png');
-          break;
-        case 'mg':
-          image = require('../icons/flags/flags_iso/48/mg.png');
-          break;
-        case 'mv':
-          image = require('../icons/flags/flags_iso/48/mv.png');
-          break;
-        case 'np':
-          image = require('../icons/flags/flags_iso/48/np.png');
-          break;
-        case 'pn':
-          image = require('../icons/flags/flags_iso/48/pn.png');
-          break;
-        case 'sb':
-          image = require('../icons/flags/flags_iso/48/sb.png');
-          break;
-        case 'sr':
-          image = require('../icons/flags/flags_iso/48/sr.png');
-          break;
-        case 'tk':
-          image = require('../icons/flags/flags_iso/48/tk.png');
-          break;
-        case 'us':
-          image = require('../icons/flags/flags_iso/48/us.png');
-          break;
-        case 'yt':
-          image = require('../icons/flags/flags_iso/48/yt.png');
-          break;
-        default:
-          image = null;
-      }
 
-      return image;
+    getDefaultProps() {
+        return {
+            type: 'SelectCountryWidget',
+            onClose: () => {},
+            code: 'alpha2',
+            autoFocus: false,
+        };
     },
-  },
-
-  getDefaultProps() {
-    return {
-      type: 'SelectCountryWidget',
-      onClose: () => {},
-      code: 'alpha2',
-      autoFocus: false,
-    };
-  },
 
     onSelect(name, value) {
         this._onChange(value);
@@ -1075,970 +1075,970 @@ module.exports = createReactClass({
     },
 
 
-  // @todo image as option
+    // @todo image as option
 
-  renderRow(rowData, sectionID, rowID) {
-    // react-native image asset requires static filenames
-    // icons from http://www.icondrawer.com/
+    renderRow(rowData, sectionID, rowID) {
+        // react-native image asset requires static filenames
+        // icons from http://www.icondrawer.com/
 
-    var image = null;
-    switch (rowData.alpha2.toLowerCase()) {
-      case 'ad':
-        image = require('../icons/flags/flags_iso/48/ad.png');
-        break;
-      case 'au':
-        image = require('../icons/flags/flags_iso/48/au.png');
-        break;
-      case 'bl':
-        image = require('../icons/flags/flags_iso/48/bl.png');
-        break;
-      case 'cc':
-        image = require('../icons/flags/flags_iso/48/cc.png');
-        break;
-      case 'cv':
-        image = require('../icons/flags/flags_iso/48/cv.png');
-        break;
-      case 'eg':
-        image = require('../icons/flags/flags_iso/48/eg.png');
-        break;
-      case 'gd':
-        image = require('../icons/flags/flags_iso/48/gd.png');
-        break;
-      case 'gt':
-        image = require('../icons/flags/flags_iso/48/gt.png');
-        break;
-      case 'im':
-        image = require('../icons/flags/flags_iso/48/im.png');
-        break;
-      case 'kh':
-        image = require('../icons/flags/flags_iso/48/kh.png');
-        break;
-      case 'lk':
-        image = require('../icons/flags/flags_iso/48/lk.png');
-        break;
-      case 'mh':
-        image = require('../icons/flags/flags_iso/48/mh.png');
-        break;
-      case 'mw':
-        image = require('../icons/flags/flags_iso/48/mw.png');
-        break;
-      case 'nr':
-        image = require('../icons/flags/flags_iso/48/nr.png');
-        break;
-      case 'pr':
-        image = require('../icons/flags/flags_iso/48/pr.png');
-        break;
-      case 'sc':
-        image = require('../icons/flags/flags_iso/48/sc.png');
-        break;
-      case 'ss':
-        image = require('../icons/flags/flags_iso/48/ss.png');
-        break;
-      case 'tl':
-        image = require('../icons/flags/flags_iso/48/tl.png');
-        break;
-      case 'uy':
-        image = require('../icons/flags/flags_iso/48/uy.png');
-        break;
-      case 'za':
-        image = require('../icons/flags/flags_iso/48/za.png');
-        break;
-      case 'ae':
-        image = require('../icons/flags/flags_iso/48/ae.png');
-        break;
-      case 'aw':
-        image = require('../icons/flags/flags_iso/48/aw.png');
-        break;
-      case 'bm':
-        image = require('../icons/flags/flags_iso/48/bm.png');
-        break;
-      case 'cd':
-        image = require('../icons/flags/flags_iso/48/cd.png');
-        break;
-      case 'cw':
-        image = require('../icons/flags/flags_iso/48/cw.png');
-        break;
-      case 'eh':
-        image = require('../icons/flags/flags_iso/48/eh.png');
-        break;
-      case 'ge':
-        image = require('../icons/flags/flags_iso/48/ge.png');
-        break;
-      case 'gu':
-        image = require('../icons/flags/flags_iso/48/gu.png');
-        break;
-      case 'in':
-        image = require('../icons/flags/flags_iso/48/in.png');
-        break;
-      case 'ki':
-        image = require('../icons/flags/flags_iso/48/ki.png');
-        break;
-      case 'lr':
-        image = require('../icons/flags/flags_iso/48/lr.png');
-        break;
-      case 'mk':
-        image = require('../icons/flags/flags_iso/48/mk.png');
-        break;
-      case 'mx':
-        image = require('../icons/flags/flags_iso/48/mx.png');
-        break;
-      case 'nu':
-        image = require('../icons/flags/flags_iso/48/nu.png');
-        break;
-      case 'ps':
-        image = require('../icons/flags/flags_iso/48/ps.png');
-        break;
-      case 'sd':
-        image = require('../icons/flags/flags_iso/48/sd.png');
-        break;
-      case 'st':
-        image = require('../icons/flags/flags_iso/48/st.png');
-        break;
-      case 'tm':
-        image = require('../icons/flags/flags_iso/48/tm.png');
-        break;
-      case 'uz':
-        image = require('../icons/flags/flags_iso/48/uz.png');
-        break;
-      case 'zm':
-        image = require('../icons/flags/flags_iso/48/zm.png');
-        break;
-      case 'af':
-        image = require('../icons/flags/flags_iso/48/af.png');
-        break;
-      case 'ax':
-        image = require('../icons/flags/flags_iso/48/ax.png');
-        break;
-      case 'bn':
-        image = require('../icons/flags/flags_iso/48/bn.png');
-        break;
-      case 'cf':
-        image = require('../icons/flags/flags_iso/48/cf.png');
-        break;
-      case 'cx':
-        image = require('../icons/flags/flags_iso/48/cx.png');
-        break;
-      case 'er':
-        image = require('../icons/flags/flags_iso/48/er.png');
-        break;
-      case 'gf':
-        image = require('../icons/flags/flags_iso/48/gf.png');
-        break;
-      case 'gw':
-        image = require('../icons/flags/flags_iso/48/gw.png');
-        break;
-      case 'io':
-        image = require('../icons/flags/flags_iso/48/io.png');
-        break;
-      case 'km':
-        image = require('../icons/flags/flags_iso/48/km.png');
-        break;
-      case 'ls':
-        image = require('../icons/flags/flags_iso/48/ls.png');
-        break;
-      case 'ml':
-        image = require('../icons/flags/flags_iso/48/ml.png');
-        break;
-      case 'my':
-        image = require('../icons/flags/flags_iso/48/my.png');
-        break;
-      case 'nz':
-        image = require('../icons/flags/flags_iso/48/nz.png');
-        break;
-      case 'pt':
-        image = require('../icons/flags/flags_iso/48/pt.png');
-        break;
-      case 'se':
-        image = require('../icons/flags/flags_iso/48/se.png');
-        break;
-      case 'sv':
-        image = require('../icons/flags/flags_iso/48/sv.png');
-        break;
-      case 'tn':
-        image = require('../icons/flags/flags_iso/48/tn.png');
-        break;
-      case 'va':
-        image = require('../icons/flags/flags_iso/48/va.png');
-        break;
-      case 'zw':
-        image = require('../icons/flags/flags_iso/48/zw.png');
-        break;
-      case 'ag':
-        image = require('../icons/flags/flags_iso/48/ag.png');
-        break;
-      case 'az':
-        image = require('../icons/flags/flags_iso/48/az.png');
-        break;
-      case 'bo':
-        image = require('../icons/flags/flags_iso/48/bo.png');
-        break;
-      case 'cg':
-        image = require('../icons/flags/flags_iso/48/cg.png');
-        break;
-      case 'cy':
-        image = require('../icons/flags/flags_iso/48/cy.png');
-        break;
-      case 'es':
-        image = require('../icons/flags/flags_iso/48/es.png');
-        break;
-      case 'gg':
-        image = require('../icons/flags/flags_iso/48/gg.png');
-        break;
-      case 'gy':
-        image = require('../icons/flags/flags_iso/48/gy.png');
-        break;
-      case 'iq':
-        image = require('../icons/flags/flags_iso/48/iq.png');
-        break;
-      case 'kn':
-        image = require('../icons/flags/flags_iso/48/kn.png');
-        break;
-      case 'lt':
-        image = require('../icons/flags/flags_iso/48/lt.png');
-        break;
-      case 'mm':
-        image = require('../icons/flags/flags_iso/48/mm.png');
-        break;
-      case 'mz':
-        image = require('../icons/flags/flags_iso/48/mz.png');
-        break;
-      case 'om':
-        image = require('../icons/flags/flags_iso/48/om.png');
-        break;
-      case 'pw':
-        image = require('../icons/flags/flags_iso/48/pw.png');
-        break;
-      case 'sg':
-        image = require('../icons/flags/flags_iso/48/sg.png');
-        break;
-      case 'sx':
-        image = require('../icons/flags/flags_iso/48/sx.png');
-        break;
-      case 'to':
-        image = require('../icons/flags/flags_iso/48/to.png');
-        break;
-      case 'vc':
-        image = require('../icons/flags/flags_iso/48/vc.png');
-        break;
-      case 'ai':
-        image = require('../icons/flags/flags_iso/48/ai.png');
-        break;
-      case 'ba':
-        image = require('../icons/flags/flags_iso/48/ba.png');
-        break;
-      case 'bq':
-        image = require('../icons/flags/flags_iso/48/bq.png');
-        break;
-      case 'ch':
-        image = require('../icons/flags/flags_iso/48/ch.png');
-        break;
-      case 'cz':
-        image = require('../icons/flags/flags_iso/48/cz.png');
-        break;
-      case 'et':
-        image = require('../icons/flags/flags_iso/48/et.png');
-        break;
-      case 'gh':
-        image = require('../icons/flags/flags_iso/48/gh.png');
-        break;
-      case 'hk':
-        image = require('../icons/flags/flags_iso/48/hk.png');
-        break;
-      case 'ir':
-        image = require('../icons/flags/flags_iso/48/ir.png');
-        break;
-      case 'kp':
-        image = require('../icons/flags/flags_iso/48/kp.png');
-        break;
-      case 'lu':
-        image = require('../icons/flags/flags_iso/48/lu.png');
-        break;
-      case 'mn':
-        image = require('../icons/flags/flags_iso/48/mn.png');
-        break;
-      case 'na':
-        image = require('../icons/flags/flags_iso/48/na.png');
-        break;
-      case 'pa':
-        image = require('../icons/flags/flags_iso/48/pa.png');
-        break;
-      case 'py':
-        image = require('../icons/flags/flags_iso/48/py.png');
-        break;
-      case 'sh':
-        image = require('../icons/flags/flags_iso/48/sh.png');
-        break;
-      case 'sy':
-        image = require('../icons/flags/flags_iso/48/sy.png');
-        break;
-      case 'tr':
-        image = require('../icons/flags/flags_iso/48/tr.png');
-        break;
-      case 've':
-        image = require('../icons/flags/flags_iso/48/ve.png');
-        break;
-      case 'al':
-        image = require('../icons/flags/flags_iso/48/al.png');
-        break;
-      case 'bb':
-        image = require('../icons/flags/flags_iso/48/bb.png');
-        break;
-      case 'br':
-        image = require('../icons/flags/flags_iso/48/br.png');
-        break;
-      case 'ci':
-        image = require('../icons/flags/flags_iso/48/ci.png');
-        break;
-      case 'de':
-        image = require('../icons/flags/flags_iso/48/de.png');
-        break;
-      case 'fi':
-        image = require('../icons/flags/flags_iso/48/fi.png');
-        break;
-      case 'gi':
-        image = require('../icons/flags/flags_iso/48/gi.png');
-        break;
-      case 'hm':
-        image = require('../icons/flags/flags_iso/48/hm.png');
-        break;
-      case 'is':
-        image = require('../icons/flags/flags_iso/48/is.png');
-        break;
-      case 'kr':
-        image = require('../icons/flags/flags_iso/48/kr.png');
-        break;
-      case 'lv':
-        image = require('../icons/flags/flags_iso/48/lv.png');
-        break;
-      case 'mo':
-        image = require('../icons/flags/flags_iso/48/mo.png');
-        break;
-      case 'nc':
-        image = require('../icons/flags/flags_iso/48/nc.png');
-        break;
-      case 'pe':
-        image = require('../icons/flags/flags_iso/48/pe.png');
-        break;
-      case 'qa':
-        image = require('../icons/flags/flags_iso/48/qa.png');
-        break;
-      case 'si':
-        image = require('../icons/flags/flags_iso/48/si.png');
-        break;
-      case 'sz':
-        image = require('../icons/flags/flags_iso/48/sz.png');
-        break;
-      case 'tt':
-        image = require('../icons/flags/flags_iso/48/tt.png');
-        break;
-      case 'vg':
-        image = require('../icons/flags/flags_iso/48/vg.png');
-        break;
-      case 'am':
-        image = require('../icons/flags/flags_iso/48/am.png');
-        break;
-      case 'bd':
-        image = require('../icons/flags/flags_iso/48/bd.png');
-        break;
-      case 'bs':
-        image = require('../icons/flags/flags_iso/48/bs.png');
-        break;
-      case 'ck':
-        image = require('../icons/flags/flags_iso/48/ck.png');
-        break;
-      case 'dj':
-        image = require('../icons/flags/flags_iso/48/dj.png');
-        break;
-      case 'fj':
-        image = require('../icons/flags/flags_iso/48/fj.png');
-        break;
-      case 'gl':
-        image = require('../icons/flags/flags_iso/48/gl.png');
-        break;
-      case 'hn':
-        image = require('../icons/flags/flags_iso/48/hn.png');
-        break;
-      case 'it':
-        image = require('../icons/flags/flags_iso/48/it.png');
-        break;
-      case 'kw':
-        image = require('../icons/flags/flags_iso/48/kw.png');
-        break;
-      case 'ly':
-        image = require('../icons/flags/flags_iso/48/ly.png');
-        break;
-      case 'mp':
-        image = require('../icons/flags/flags_iso/48/mp.png');
-        break;
-      case 'ne':
-        image = require('../icons/flags/flags_iso/48/ne.png');
-        break;
-      case 'pf':
-        image = require('../icons/flags/flags_iso/48/pf.png');
-        break;
-      case 're':
-        image = require('../icons/flags/flags_iso/48/re.png');
-        break;
-      case 'sj':
-        image = require('../icons/flags/flags_iso/48/sj.png');
-        break;
-      case 'tc':
-        image = require('../icons/flags/flags_iso/48/tc.png');
-        break;
-      case 'tv':
-        image = require('../icons/flags/flags_iso/48/tv.png');
-        break;
-      case 'vi':
-        image = require('../icons/flags/flags_iso/48/vi.png');
-        break;
-      case 'an':
-        image = require('../icons/flags/flags_iso/48/an.png');
-        break;
-      case 'be':
-        image = require('../icons/flags/flags_iso/48/be.png');
-        break;
-      case 'bt':
-        image = require('../icons/flags/flags_iso/48/bt.png');
-        break;
-      case 'cl':
-        image = require('../icons/flags/flags_iso/48/cl.png');
-        break;
-      case 'dk':
-        image = require('../icons/flags/flags_iso/48/dk.png');
-        break;
-      case 'fk':
-        image = require('../icons/flags/flags_iso/48/fk.png');
-        break;
-      case 'gm':
-        image = require('../icons/flags/flags_iso/48/gm.png');
-        break;
-      case 'hr':
-        image = require('../icons/flags/flags_iso/48/hr.png');
-        break;
-      case 'je':
-        image = require('../icons/flags/flags_iso/48/je.png');
-        break;
-      case 'ky':
-        image = require('../icons/flags/flags_iso/48/ky.png');
-        break;
-      case 'ma':
-        image = require('../icons/flags/flags_iso/48/ma.png');
-        break;
-      case 'mq':
-        image = require('../icons/flags/flags_iso/48/mq.png');
-        break;
-      case 'nf':
-        image = require('../icons/flags/flags_iso/48/nf.png');
-        break;
-      case 'pg':
-        image = require('../icons/flags/flags_iso/48/pg.png');
-        break;
-      case 'ro':
-        image = require('../icons/flags/flags_iso/48/ro.png');
-        break;
-      case 'sk':
-        image = require('../icons/flags/flags_iso/48/sk.png');
-        break;
-      case 'td':
-        image = require('../icons/flags/flags_iso/48/td.png');
-        break;
-      case 'tw':
-        image = require('../icons/flags/flags_iso/48/tw.png');
-        break;
-      case 'vn':
-        image = require('../icons/flags/flags_iso/48/vn.png');
-        break;
-      case 'ao':
-        image = require('../icons/flags/flags_iso/48/ao.png');
-        break;
-      case 'bf':
-        image = require('../icons/flags/flags_iso/48/bf.png');
-        break;
-      case 'bv':
-        image = require('../icons/flags/flags_iso/48/bv.png');
-        break;
-      case 'cm':
-        image = require('../icons/flags/flags_iso/48/cm.png');
-        break;
-      case 'dm':
-        image = require('../icons/flags/flags_iso/48/dm.png');
-        break;
-      case 'fm':
-        image = require('../icons/flags/flags_iso/48/fm.png');
-        break;
-      case 'gn':
-        image = require('../icons/flags/flags_iso/48/gn.png');
-        break;
-      case 'ht':
-        image = require('../icons/flags/flags_iso/48/ht.png');
-        break;
-      case 'jm':
-        image = require('../icons/flags/flags_iso/48/jm.png');
-        break;
-      case 'kz':
-        image = require('../icons/flags/flags_iso/48/kz.png');
-        break;
-      case 'mc':
-        image = require('../icons/flags/flags_iso/48/mc.png');
-        break;
-      case 'mr':
-        image = require('../icons/flags/flags_iso/48/mr.png');
-        break;
-      case 'ng':
-        image = require('../icons/flags/flags_iso/48/ng.png');
-        break;
-      case 'ph':
-        image = require('../icons/flags/flags_iso/48/ph.png');
-        break;
-      case 'rs':
-        image = require('../icons/flags/flags_iso/48/rs.png');
-        break;
-      case 'sl':
-        image = require('../icons/flags/flags_iso/48/sl.png');
-        break;
-      case 'tf':
-        image = require('../icons/flags/flags_iso/48/tf.png');
-        break;
-      case 'tz':
-        image = require('../icons/flags/flags_iso/48/tz.png');
-        break;
-      case 'vu':
-        image = require('../icons/flags/flags_iso/48/vu.png');
-        break;
-      case 'aq':
-        image = require('../icons/flags/flags_iso/48/aq.png');
-        break;
-      case 'bg':
-        image = require('../icons/flags/flags_iso/48/bg.png');
-        break;
-      case 'bw':
-        image = require('../icons/flags/flags_iso/48/bw.png');
-        break;
-      case 'cn':
-        image = require('../icons/flags/flags_iso/48/cn.png');
-        break;
-      case 'do':
-        image = require('../icons/flags/flags_iso/48/do.png');
-        break;
-      case 'fo':
-        image = require('../icons/flags/flags_iso/48/fo.png');
-        break;
-      case 'gp':
-        image = require('../icons/flags/flags_iso/48/gp.png');
-        break;
-      case 'hu':
-        image = require('../icons/flags/flags_iso/48/hu.png');
-        break;
-      case 'jo':
-        image = require('../icons/flags/flags_iso/48/jo.png');
-        break;
-      case 'la':
-        image = require('../icons/flags/flags_iso/48/la.png');
-        break;
-      case 'md':
-        image = require('../icons/flags/flags_iso/48/md.png');
-        break;
-      case 'ms':
-        image = require('../icons/flags/flags_iso/48/ms.png');
-        break;
-      case 'ni':
-        image = require('../icons/flags/flags_iso/48/ni.png');
-        break;
-      case 'pk':
-        image = require('../icons/flags/flags_iso/48/pk.png');
-        break;
-      case 'ru':
-        image = require('../icons/flags/flags_iso/48/ru.png');
-        break;
-      case 'sm':
-        image = require('../icons/flags/flags_iso/48/sm.png');
-        break;
-      case 'tg':
-        image = require('../icons/flags/flags_iso/48/tg.png');
-        break;
-      case 'ua':
-        image = require('../icons/flags/flags_iso/48/ua.png');
-        break;
-      case 'wf':
-        image = require('../icons/flags/flags_iso/48/wf.png');
-        break;
-      case 'ar':
-        image = require('../icons/flags/flags_iso/48/ar.png');
-        break;
-      case 'bh':
-        image = require('../icons/flags/flags_iso/48/bh.png');
-        break;
-      case 'by':
-        image = require('../icons/flags/flags_iso/48/by.png');
-        break;
-      case 'co':
-        image = require('../icons/flags/flags_iso/48/co.png');
-        break;
-      case 'dz':
-        image = require('../icons/flags/flags_iso/48/dz.png');
-        break;
-      case 'fr':
-        image = require('../icons/flags/flags_iso/48/fr.png');
-        break;
-      case 'gq':
-        image = require('../icons/flags/flags_iso/48/gq.png');
-        break;
-      case 'id':
-        image = require('../icons/flags/flags_iso/48/id.png');
-        break;
-      case 'jp':
-        image = require('../icons/flags/flags_iso/48/jp.png');
-        break;
-      case 'lb':
-        image = require('../icons/flags/flags_iso/48/lb.png');
-        break;
-      case 'me':
-        image = require('../icons/flags/flags_iso/48/me.png');
-        break;
-      case 'mt':
-        image = require('../icons/flags/flags_iso/48/mt.png');
-        break;
-      case 'nl':
-        image = require('../icons/flags/flags_iso/48/nl.png');
-        break;
-      case 'pl':
-        image = require('../icons/flags/flags_iso/48/pl.png');
-        break;
-      case 'rw':
-        image = require('../icons/flags/flags_iso/48/rw.png');
-        break;
-      case 'sn':
-        image = require('../icons/flags/flags_iso/48/sn.png');
-        break;
-      case 'th':
-        image = require('../icons/flags/flags_iso/48/th.png');
-        break;
-      case 'ug':
-        image = require('../icons/flags/flags_iso/48/ug.png');
-        break;
-      case 'ws':
-        image = require('../icons/flags/flags_iso/48/ws.png');
-        break;
-      case 'as':
-        image = require('../icons/flags/flags_iso/48/as.png');
-        break;
-      case 'bi':
-        image = require('../icons/flags/flags_iso/48/bi.png');
-        break;
-      case 'bz':
-        image = require('../icons/flags/flags_iso/48/bz.png');
-        break;
-      case 'cr':
-        image = require('../icons/flags/flags_iso/48/cr.png');
-        break;
-      case 'ec':
-        image = require('../icons/flags/flags_iso/48/ec.png');
-        break;
-      case 'ga':
-        image = require('../icons/flags/flags_iso/48/ga.png');
-        break;
-      case 'gr':
-        image = require('../icons/flags/flags_iso/48/gr.png');
-        break;
-      case 'ie':
-        image = require('../icons/flags/flags_iso/48/ie.png');
-        break;
-      case 'ke':
-        image = require('../icons/flags/flags_iso/48/ke.png');
-        break;
-      case 'lc':
-        image = require('../icons/flags/flags_iso/48/lc.png');
-        break;
-      case 'mf':
-        image = require('../icons/flags/flags_iso/48/mf.png');
-        break;
-      case 'mu':
-        image = require('../icons/flags/flags_iso/48/mu.png');
-        break;
-      case 'no':
-        image = require('../icons/flags/flags_iso/48/no.png');
-        break;
-      case 'pm':
-        image = require('../icons/flags/flags_iso/48/pm.png');
-        break;
-      case 'sa':
-        image = require('../icons/flags/flags_iso/48/sa.png');
-        break;
-      case 'so':
-        image = require('../icons/flags/flags_iso/48/so.png');
-        break;
-      case 'tj':
-        image = require('../icons/flags/flags_iso/48/tj.png');
-        break;
-      case 'um':
-        image = require('../icons/flags/flags_iso/48/um.png');
-        break;
-      case 'ye':
-        image = require('../icons/flags/flags_iso/48/ye.png');
-        break;
-      case 'at':
-        image = require('../icons/flags/flags_iso/48/at.png');
-        break;
-      case 'bj':
-        image = require('../icons/flags/flags_iso/48/bj.png');
-        break;
-      case 'ca':
-        image = require('../icons/flags/flags_iso/48/ca.png');
-        break;
-      case 'cu':
-        image = require('../icons/flags/flags_iso/48/cu.png');
-        break;
-      case 'ee':
-        image = require('../icons/flags/flags_iso/48/ee.png');
-        break;
-      case 'gb':
-        image = require('../icons/flags/flags_iso/48/gb.png');
-        break;
-      case 'gs':
-        image = require('../icons/flags/flags_iso/48/gs.png');
-        break;
-      case 'il':
-        image = require('../icons/flags/flags_iso/48/il.png');
-        break;
-      case 'kg':
-        image = require('../icons/flags/flags_iso/48/kg.png');
-        break;
-      case 'li':
-        image = require('../icons/flags/flags_iso/48/li.png');
-        break;
-      case 'mg':
-        image = require('../icons/flags/flags_iso/48/mg.png');
-        break;
-      case 'mv':
-        image = require('../icons/flags/flags_iso/48/mv.png');
-        break;
-      case 'np':
-        image = require('../icons/flags/flags_iso/48/np.png');
-        break;
-      case 'pn':
-        image = require('../icons/flags/flags_iso/48/pn.png');
-        break;
-      case 'sb':
-        image = require('../icons/flags/flags_iso/48/sb.png');
-        break;
-      case 'sr':
-        image = require('../icons/flags/flags_iso/48/sr.png');
-        break;
-      case 'tk':
-        image = require('../icons/flags/flags_iso/48/tk.png');
-        break;
-      case 'us':
-        image = require('../icons/flags/flags_iso/48/us.png');
-        break;
-      case 'yt':
-        image = require('../icons/flags/flags_iso/48/yt.png');
-        break;
-      default:
-        image = null;
-    }
-
-
-    if (image === null) {
-      return (
-        <TouchableHighlight
-          key={rowData.alpha2}
-          onPress={() => this.onSelect(rowData.name, rowData[this.props.code])}
-          underlayColor={this.getStyle('underlayColor').pop()}
-
-          style={this.getStyle(['row'])}
-        >
-          <View style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-          }}>
-            <View
-              style={{
-                backgroundColor: '#c9c9c9',
-                height: 20,
-                width: 30,
-                marginLeft: 10,
-                marginRight: 10,
-              }}
-            />
-
-            <Text numberOfLines={1} style={{color:'#61616b',
-              flex: 1,
-            }}>{rowData.name}</Text>
-          </View>
-        </TouchableHighlight>
-      );
-    } else {
-      return (
-        <TouchableHighlight
-          key={rowData.alpha2}
-
-          onPress={() => this.onSelect(rowData.name, rowData[this.props.code])}
-          underlayColor={this.getStyle('underlayColor').pop()}
-
-          style={this.getStyle(['row'])}
-        >
-          <View style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-          }}>
-            <Image
-              key={rowData.alpha2+'Image'}
-              resizeMode={Image.resizeMode.contain}
-              source={image}
-              style={{
-                height: 30,
-                width: 30,
-                marginLeft: 10,
-                marginRight: 10,
-              }}
-            />
-            <Text numberOfLines={1} style={{color:'#61616b',
-              flex: 1,
-            }}>{rowData.name}</Text>
-          </View>
-        </TouchableHighlight>
-      );
-    }
-  },
-
-  getInitialState: function() {
-    var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-    return {
-      dataSource: ds.cloneWithRows([]),
-      search: '',
-    };
-  },
-
-  updateRows(text = '') {
-    if (text.length === 0) {
-      this.setState({
-        dataSource: this.state.dataSource.cloneWithRows([]),
-      });
-      return;
-    }
-
-    var results = [];
-
-    for (let i = 0; i < countries.length; i++) {
-      if (countries[i].name.toLowerCase().indexOf(text.trim().toLowerCase()) !== -1) {
-        results.push(countries[i]);
-        if (results.length === 10) { // max results
-          break;
+        var image = null;
+        switch (rowData.alpha2.toLowerCase()) {
+            case 'ad':
+                image = require('../icons/flags/flags_iso/48/ad.png');
+                break;
+            case 'au':
+                image = require('../icons/flags/flags_iso/48/au.png');
+                break;
+            case 'bl':
+                image = require('../icons/flags/flags_iso/48/bl.png');
+                break;
+            case 'cc':
+                image = require('../icons/flags/flags_iso/48/cc.png');
+                break;
+            case 'cv':
+                image = require('../icons/flags/flags_iso/48/cv.png');
+                break;
+            case 'eg':
+                image = require('../icons/flags/flags_iso/48/eg.png');
+                break;
+            case 'gd':
+                image = require('../icons/flags/flags_iso/48/gd.png');
+                break;
+            case 'gt':
+                image = require('../icons/flags/flags_iso/48/gt.png');
+                break;
+            case 'im':
+                image = require('../icons/flags/flags_iso/48/im.png');
+                break;
+            case 'kh':
+                image = require('../icons/flags/flags_iso/48/kh.png');
+                break;
+            case 'lk':
+                image = require('../icons/flags/flags_iso/48/lk.png');
+                break;
+            case 'mh':
+                image = require('../icons/flags/flags_iso/48/mh.png');
+                break;
+            case 'mw':
+                image = require('../icons/flags/flags_iso/48/mw.png');
+                break;
+            case 'nr':
+                image = require('../icons/flags/flags_iso/48/nr.png');
+                break;
+            case 'pr':
+                image = require('../icons/flags/flags_iso/48/pr.png');
+                break;
+            case 'sc':
+                image = require('../icons/flags/flags_iso/48/sc.png');
+                break;
+            case 'ss':
+                image = require('../icons/flags/flags_iso/48/ss.png');
+                break;
+            case 'tl':
+                image = require('../icons/flags/flags_iso/48/tl.png');
+                break;
+            case 'uy':
+                image = require('../icons/flags/flags_iso/48/uy.png');
+                break;
+            case 'za':
+                image = require('../icons/flags/flags_iso/48/za.png');
+                break;
+            case 'ae':
+                image = require('../icons/flags/flags_iso/48/ae.png');
+                break;
+            case 'aw':
+                image = require('../icons/flags/flags_iso/48/aw.png');
+                break;
+            case 'bm':
+                image = require('../icons/flags/flags_iso/48/bm.png');
+                break;
+            case 'cd':
+                image = require('../icons/flags/flags_iso/48/cd.png');
+                break;
+            case 'cw':
+                image = require('../icons/flags/flags_iso/48/cw.png');
+                break;
+            case 'eh':
+                image = require('../icons/flags/flags_iso/48/eh.png');
+                break;
+            case 'ge':
+                image = require('../icons/flags/flags_iso/48/ge.png');
+                break;
+            case 'gu':
+                image = require('../icons/flags/flags_iso/48/gu.png');
+                break;
+            case 'in':
+                image = require('../icons/flags/flags_iso/48/in.png');
+                break;
+            case 'ki':
+                image = require('../icons/flags/flags_iso/48/ki.png');
+                break;
+            case 'lr':
+                image = require('../icons/flags/flags_iso/48/lr.png');
+                break;
+            case 'mk':
+                image = require('../icons/flags/flags_iso/48/mk.png');
+                break;
+            case 'mx':
+                image = require('../icons/flags/flags_iso/48/mx.png');
+                break;
+            case 'nu':
+                image = require('../icons/flags/flags_iso/48/nu.png');
+                break;
+            case 'ps':
+                image = require('../icons/flags/flags_iso/48/ps.png');
+                break;
+            case 'sd':
+                image = require('../icons/flags/flags_iso/48/sd.png');
+                break;
+            case 'st':
+                image = require('../icons/flags/flags_iso/48/st.png');
+                break;
+            case 'tm':
+                image = require('../icons/flags/flags_iso/48/tm.png');
+                break;
+            case 'uz':
+                image = require('../icons/flags/flags_iso/48/uz.png');
+                break;
+            case 'zm':
+                image = require('../icons/flags/flags_iso/48/zm.png');
+                break;
+            case 'af':
+                image = require('../icons/flags/flags_iso/48/af.png');
+                break;
+            case 'ax':
+                image = require('../icons/flags/flags_iso/48/ax.png');
+                break;
+            case 'bn':
+                image = require('../icons/flags/flags_iso/48/bn.png');
+                break;
+            case 'cf':
+                image = require('../icons/flags/flags_iso/48/cf.png');
+                break;
+            case 'cx':
+                image = require('../icons/flags/flags_iso/48/cx.png');
+                break;
+            case 'er':
+                image = require('../icons/flags/flags_iso/48/er.png');
+                break;
+            case 'gf':
+                image = require('../icons/flags/flags_iso/48/gf.png');
+                break;
+            case 'gw':
+                image = require('../icons/flags/flags_iso/48/gw.png');
+                break;
+            case 'io':
+                image = require('../icons/flags/flags_iso/48/io.png');
+                break;
+            case 'km':
+                image = require('../icons/flags/flags_iso/48/km.png');
+                break;
+            case 'ls':
+                image = require('../icons/flags/flags_iso/48/ls.png');
+                break;
+            case 'ml':
+                image = require('../icons/flags/flags_iso/48/ml.png');
+                break;
+            case 'my':
+                image = require('../icons/flags/flags_iso/48/my.png');
+                break;
+            case 'nz':
+                image = require('../icons/flags/flags_iso/48/nz.png');
+                break;
+            case 'pt':
+                image = require('../icons/flags/flags_iso/48/pt.png');
+                break;
+            case 'se':
+                image = require('../icons/flags/flags_iso/48/se.png');
+                break;
+            case 'sv':
+                image = require('../icons/flags/flags_iso/48/sv.png');
+                break;
+            case 'tn':
+                image = require('../icons/flags/flags_iso/48/tn.png');
+                break;
+            case 'va':
+                image = require('../icons/flags/flags_iso/48/va.png');
+                break;
+            case 'zw':
+                image = require('../icons/flags/flags_iso/48/zw.png');
+                break;
+            case 'ag':
+                image = require('../icons/flags/flags_iso/48/ag.png');
+                break;
+            case 'az':
+                image = require('../icons/flags/flags_iso/48/az.png');
+                break;
+            case 'bo':
+                image = require('../icons/flags/flags_iso/48/bo.png');
+                break;
+            case 'cg':
+                image = require('../icons/flags/flags_iso/48/cg.png');
+                break;
+            case 'cy':
+                image = require('../icons/flags/flags_iso/48/cy.png');
+                break;
+            case 'es':
+                image = require('../icons/flags/flags_iso/48/es.png');
+                break;
+            case 'gg':
+                image = require('../icons/flags/flags_iso/48/gg.png');
+                break;
+            case 'gy':
+                image = require('../icons/flags/flags_iso/48/gy.png');
+                break;
+            case 'iq':
+                image = require('../icons/flags/flags_iso/48/iq.png');
+                break;
+            case 'kn':
+                image = require('../icons/flags/flags_iso/48/kn.png');
+                break;
+            case 'lt':
+                image = require('../icons/flags/flags_iso/48/lt.png');
+                break;
+            case 'mm':
+                image = require('../icons/flags/flags_iso/48/mm.png');
+                break;
+            case 'mz':
+                image = require('../icons/flags/flags_iso/48/mz.png');
+                break;
+            case 'om':
+                image = require('../icons/flags/flags_iso/48/om.png');
+                break;
+            case 'pw':
+                image = require('../icons/flags/flags_iso/48/pw.png');
+                break;
+            case 'sg':
+                image = require('../icons/flags/flags_iso/48/sg.png');
+                break;
+            case 'sx':
+                image = require('../icons/flags/flags_iso/48/sx.png');
+                break;
+            case 'to':
+                image = require('../icons/flags/flags_iso/48/to.png');
+                break;
+            case 'vc':
+                image = require('../icons/flags/flags_iso/48/vc.png');
+                break;
+            case 'ai':
+                image = require('../icons/flags/flags_iso/48/ai.png');
+                break;
+            case 'ba':
+                image = require('../icons/flags/flags_iso/48/ba.png');
+                break;
+            case 'bq':
+                image = require('../icons/flags/flags_iso/48/bq.png');
+                break;
+            case 'ch':
+                image = require('../icons/flags/flags_iso/48/ch.png');
+                break;
+            case 'cz':
+                image = require('../icons/flags/flags_iso/48/cz.png');
+                break;
+            case 'et':
+                image = require('../icons/flags/flags_iso/48/et.png');
+                break;
+            case 'gh':
+                image = require('../icons/flags/flags_iso/48/gh.png');
+                break;
+            case 'hk':
+                image = require('../icons/flags/flags_iso/48/hk.png');
+                break;
+            case 'ir':
+                image = require('../icons/flags/flags_iso/48/ir.png');
+                break;
+            case 'kp':
+                image = require('../icons/flags/flags_iso/48/kp.png');
+                break;
+            case 'lu':
+                image = require('../icons/flags/flags_iso/48/lu.png');
+                break;
+            case 'mn':
+                image = require('../icons/flags/flags_iso/48/mn.png');
+                break;
+            case 'na':
+                image = require('../icons/flags/flags_iso/48/na.png');
+                break;
+            case 'pa':
+                image = require('../icons/flags/flags_iso/48/pa.png');
+                break;
+            case 'py':
+                image = require('../icons/flags/flags_iso/48/py.png');
+                break;
+            case 'sh':
+                image = require('../icons/flags/flags_iso/48/sh.png');
+                break;
+            case 'sy':
+                image = require('../icons/flags/flags_iso/48/sy.png');
+                break;
+            case 'tr':
+                image = require('../icons/flags/flags_iso/48/tr.png');
+                break;
+            case 've':
+                image = require('../icons/flags/flags_iso/48/ve.png');
+                break;
+            case 'al':
+                image = require('../icons/flags/flags_iso/48/al.png');
+                break;
+            case 'bb':
+                image = require('../icons/flags/flags_iso/48/bb.png');
+                break;
+            case 'br':
+                image = require('../icons/flags/flags_iso/48/br.png');
+                break;
+            case 'ci':
+                image = require('../icons/flags/flags_iso/48/ci.png');
+                break;
+            case 'de':
+                image = require('../icons/flags/flags_iso/48/de.png');
+                break;
+            case 'fi':
+                image = require('../icons/flags/flags_iso/48/fi.png');
+                break;
+            case 'gi':
+                image = require('../icons/flags/flags_iso/48/gi.png');
+                break;
+            case 'hm':
+                image = require('../icons/flags/flags_iso/48/hm.png');
+                break;
+            case 'is':
+                image = require('../icons/flags/flags_iso/48/is.png');
+                break;
+            case 'kr':
+                image = require('../icons/flags/flags_iso/48/kr.png');
+                break;
+            case 'lv':
+                image = require('../icons/flags/flags_iso/48/lv.png');
+                break;
+            case 'mo':
+                image = require('../icons/flags/flags_iso/48/mo.png');
+                break;
+            case 'nc':
+                image = require('../icons/flags/flags_iso/48/nc.png');
+                break;
+            case 'pe':
+                image = require('../icons/flags/flags_iso/48/pe.png');
+                break;
+            case 'qa':
+                image = require('../icons/flags/flags_iso/48/qa.png');
+                break;
+            case 'si':
+                image = require('../icons/flags/flags_iso/48/si.png');
+                break;
+            case 'sz':
+                image = require('../icons/flags/flags_iso/48/sz.png');
+                break;
+            case 'tt':
+                image = require('../icons/flags/flags_iso/48/tt.png');
+                break;
+            case 'vg':
+                image = require('../icons/flags/flags_iso/48/vg.png');
+                break;
+            case 'am':
+                image = require('../icons/flags/flags_iso/48/am.png');
+                break;
+            case 'bd':
+                image = require('../icons/flags/flags_iso/48/bd.png');
+                break;
+            case 'bs':
+                image = require('../icons/flags/flags_iso/48/bs.png');
+                break;
+            case 'ck':
+                image = require('../icons/flags/flags_iso/48/ck.png');
+                break;
+            case 'dj':
+                image = require('../icons/flags/flags_iso/48/dj.png');
+                break;
+            case 'fj':
+                image = require('../icons/flags/flags_iso/48/fj.png');
+                break;
+            case 'gl':
+                image = require('../icons/flags/flags_iso/48/gl.png');
+                break;
+            case 'hn':
+                image = require('../icons/flags/flags_iso/48/hn.png');
+                break;
+            case 'it':
+                image = require('../icons/flags/flags_iso/48/it.png');
+                break;
+            case 'kw':
+                image = require('../icons/flags/flags_iso/48/kw.png');
+                break;
+            case 'ly':
+                image = require('../icons/flags/flags_iso/48/ly.png');
+                break;
+            case 'mp':
+                image = require('../icons/flags/flags_iso/48/mp.png');
+                break;
+            case 'ne':
+                image = require('../icons/flags/flags_iso/48/ne.png');
+                break;
+            case 'pf':
+                image = require('../icons/flags/flags_iso/48/pf.png');
+                break;
+            case 're':
+                image = require('../icons/flags/flags_iso/48/re.png');
+                break;
+            case 'sj':
+                image = require('../icons/flags/flags_iso/48/sj.png');
+                break;
+            case 'tc':
+                image = require('../icons/flags/flags_iso/48/tc.png');
+                break;
+            case 'tv':
+                image = require('../icons/flags/flags_iso/48/tv.png');
+                break;
+            case 'vi':
+                image = require('../icons/flags/flags_iso/48/vi.png');
+                break;
+            case 'an':
+                image = require('../icons/flags/flags_iso/48/an.png');
+                break;
+            case 'be':
+                image = require('../icons/flags/flags_iso/48/be.png');
+                break;
+            case 'bt':
+                image = require('../icons/flags/flags_iso/48/bt.png');
+                break;
+            case 'cl':
+                image = require('../icons/flags/flags_iso/48/cl.png');
+                break;
+            case 'dk':
+                image = require('../icons/flags/flags_iso/48/dk.png');
+                break;
+            case 'fk':
+                image = require('../icons/flags/flags_iso/48/fk.png');
+                break;
+            case 'gm':
+                image = require('../icons/flags/flags_iso/48/gm.png');
+                break;
+            case 'hr':
+                image = require('../icons/flags/flags_iso/48/hr.png');
+                break;
+            case 'je':
+                image = require('../icons/flags/flags_iso/48/je.png');
+                break;
+            case 'ky':
+                image = require('../icons/flags/flags_iso/48/ky.png');
+                break;
+            case 'ma':
+                image = require('../icons/flags/flags_iso/48/ma.png');
+                break;
+            case 'mq':
+                image = require('../icons/flags/flags_iso/48/mq.png');
+                break;
+            case 'nf':
+                image = require('../icons/flags/flags_iso/48/nf.png');
+                break;
+            case 'pg':
+                image = require('../icons/flags/flags_iso/48/pg.png');
+                break;
+            case 'ro':
+                image = require('../icons/flags/flags_iso/48/ro.png');
+                break;
+            case 'sk':
+                image = require('../icons/flags/flags_iso/48/sk.png');
+                break;
+            case 'td':
+                image = require('../icons/flags/flags_iso/48/td.png');
+                break;
+            case 'tw':
+                image = require('../icons/flags/flags_iso/48/tw.png');
+                break;
+            case 'vn':
+                image = require('../icons/flags/flags_iso/48/vn.png');
+                break;
+            case 'ao':
+                image = require('../icons/flags/flags_iso/48/ao.png');
+                break;
+            case 'bf':
+                image = require('../icons/flags/flags_iso/48/bf.png');
+                break;
+            case 'bv':
+                image = require('../icons/flags/flags_iso/48/bv.png');
+                break;
+            case 'cm':
+                image = require('../icons/flags/flags_iso/48/cm.png');
+                break;
+            case 'dm':
+                image = require('../icons/flags/flags_iso/48/dm.png');
+                break;
+            case 'fm':
+                image = require('../icons/flags/flags_iso/48/fm.png');
+                break;
+            case 'gn':
+                image = require('../icons/flags/flags_iso/48/gn.png');
+                break;
+            case 'ht':
+                image = require('../icons/flags/flags_iso/48/ht.png');
+                break;
+            case 'jm':
+                image = require('../icons/flags/flags_iso/48/jm.png');
+                break;
+            case 'kz':
+                image = require('../icons/flags/flags_iso/48/kz.png');
+                break;
+            case 'mc':
+                image = require('../icons/flags/flags_iso/48/mc.png');
+                break;
+            case 'mr':
+                image = require('../icons/flags/flags_iso/48/mr.png');
+                break;
+            case 'ng':
+                image = require('../icons/flags/flags_iso/48/ng.png');
+                break;
+            case 'ph':
+                image = require('../icons/flags/flags_iso/48/ph.png');
+                break;
+            case 'rs':
+                image = require('../icons/flags/flags_iso/48/rs.png');
+                break;
+            case 'sl':
+                image = require('../icons/flags/flags_iso/48/sl.png');
+                break;
+            case 'tf':
+                image = require('../icons/flags/flags_iso/48/tf.png');
+                break;
+            case 'tz':
+                image = require('../icons/flags/flags_iso/48/tz.png');
+                break;
+            case 'vu':
+                image = require('../icons/flags/flags_iso/48/vu.png');
+                break;
+            case 'aq':
+                image = require('../icons/flags/flags_iso/48/aq.png');
+                break;
+            case 'bg':
+                image = require('../icons/flags/flags_iso/48/bg.png');
+                break;
+            case 'bw':
+                image = require('../icons/flags/flags_iso/48/bw.png');
+                break;
+            case 'cn':
+                image = require('../icons/flags/flags_iso/48/cn.png');
+                break;
+            case 'do':
+                image = require('../icons/flags/flags_iso/48/do.png');
+                break;
+            case 'fo':
+                image = require('../icons/flags/flags_iso/48/fo.png');
+                break;
+            case 'gp':
+                image = require('../icons/flags/flags_iso/48/gp.png');
+                break;
+            case 'hu':
+                image = require('../icons/flags/flags_iso/48/hu.png');
+                break;
+            case 'jo':
+                image = require('../icons/flags/flags_iso/48/jo.png');
+                break;
+            case 'la':
+                image = require('../icons/flags/flags_iso/48/la.png');
+                break;
+            case 'md':
+                image = require('../icons/flags/flags_iso/48/md.png');
+                break;
+            case 'ms':
+                image = require('../icons/flags/flags_iso/48/ms.png');
+                break;
+            case 'ni':
+                image = require('../icons/flags/flags_iso/48/ni.png');
+                break;
+            case 'pk':
+                image = require('../icons/flags/flags_iso/48/pk.png');
+                break;
+            case 'ru':
+                image = require('../icons/flags/flags_iso/48/ru.png');
+                break;
+            case 'sm':
+                image = require('../icons/flags/flags_iso/48/sm.png');
+                break;
+            case 'tg':
+                image = require('../icons/flags/flags_iso/48/tg.png');
+                break;
+            case 'ua':
+                image = require('../icons/flags/flags_iso/48/ua.png');
+                break;
+            case 'wf':
+                image = require('../icons/flags/flags_iso/48/wf.png');
+                break;
+            case 'ar':
+                image = require('../icons/flags/flags_iso/48/ar.png');
+                break;
+            case 'bh':
+                image = require('../icons/flags/flags_iso/48/bh.png');
+                break;
+            case 'by':
+                image = require('../icons/flags/flags_iso/48/by.png');
+                break;
+            case 'co':
+                image = require('../icons/flags/flags_iso/48/co.png');
+                break;
+            case 'dz':
+                image = require('../icons/flags/flags_iso/48/dz.png');
+                break;
+            case 'fr':
+                image = require('../icons/flags/flags_iso/48/fr.png');
+                break;
+            case 'gq':
+                image = require('../icons/flags/flags_iso/48/gq.png');
+                break;
+            case 'id':
+                image = require('../icons/flags/flags_iso/48/id.png');
+                break;
+            case 'jp':
+                image = require('../icons/flags/flags_iso/48/jp.png');
+                break;
+            case 'lb':
+                image = require('../icons/flags/flags_iso/48/lb.png');
+                break;
+            case 'me':
+                image = require('../icons/flags/flags_iso/48/me.png');
+                break;
+            case 'mt':
+                image = require('../icons/flags/flags_iso/48/mt.png');
+                break;
+            case 'nl':
+                image = require('../icons/flags/flags_iso/48/nl.png');
+                break;
+            case 'pl':
+                image = require('../icons/flags/flags_iso/48/pl.png');
+                break;
+            case 'rw':
+                image = require('../icons/flags/flags_iso/48/rw.png');
+                break;
+            case 'sn':
+                image = require('../icons/flags/flags_iso/48/sn.png');
+                break;
+            case 'th':
+                image = require('../icons/flags/flags_iso/48/th.png');
+                break;
+            case 'ug':
+                image = require('../icons/flags/flags_iso/48/ug.png');
+                break;
+            case 'ws':
+                image = require('../icons/flags/flags_iso/48/ws.png');
+                break;
+            case 'as':
+                image = require('../icons/flags/flags_iso/48/as.png');
+                break;
+            case 'bi':
+                image = require('../icons/flags/flags_iso/48/bi.png');
+                break;
+            case 'bz':
+                image = require('../icons/flags/flags_iso/48/bz.png');
+                break;
+            case 'cr':
+                image = require('../icons/flags/flags_iso/48/cr.png');
+                break;
+            case 'ec':
+                image = require('../icons/flags/flags_iso/48/ec.png');
+                break;
+            case 'ga':
+                image = require('../icons/flags/flags_iso/48/ga.png');
+                break;
+            case 'gr':
+                image = require('../icons/flags/flags_iso/48/gr.png');
+                break;
+            case 'ie':
+                image = require('../icons/flags/flags_iso/48/ie.png');
+                break;
+            case 'ke':
+                image = require('../icons/flags/flags_iso/48/ke.png');
+                break;
+            case 'lc':
+                image = require('../icons/flags/flags_iso/48/lc.png');
+                break;
+            case 'mf':
+                image = require('../icons/flags/flags_iso/48/mf.png');
+                break;
+            case 'mu':
+                image = require('../icons/flags/flags_iso/48/mu.png');
+                break;
+            case 'no':
+                image = require('../icons/flags/flags_iso/48/no.png');
+                break;
+            case 'pm':
+                image = require('../icons/flags/flags_iso/48/pm.png');
+                break;
+            case 'sa':
+                image = require('../icons/flags/flags_iso/48/sa.png');
+                break;
+            case 'so':
+                image = require('../icons/flags/flags_iso/48/so.png');
+                break;
+            case 'tj':
+                image = require('../icons/flags/flags_iso/48/tj.png');
+                break;
+            case 'um':
+                image = require('../icons/flags/flags_iso/48/um.png');
+                break;
+            case 'ye':
+                image = require('../icons/flags/flags_iso/48/ye.png');
+                break;
+            case 'at':
+                image = require('../icons/flags/flags_iso/48/at.png');
+                break;
+            case 'bj':
+                image = require('../icons/flags/flags_iso/48/bj.png');
+                break;
+            case 'ca':
+                image = require('../icons/flags/flags_iso/48/ca.png');
+                break;
+            case 'cu':
+                image = require('../icons/flags/flags_iso/48/cu.png');
+                break;
+            case 'ee':
+                image = require('../icons/flags/flags_iso/48/ee.png');
+                break;
+            case 'gb':
+                image = require('../icons/flags/flags_iso/48/gb.png');
+                break;
+            case 'gs':
+                image = require('../icons/flags/flags_iso/48/gs.png');
+                break;
+            case 'il':
+                image = require('../icons/flags/flags_iso/48/il.png');
+                break;
+            case 'kg':
+                image = require('../icons/flags/flags_iso/48/kg.png');
+                break;
+            case 'li':
+                image = require('../icons/flags/flags_iso/48/li.png');
+                break;
+            case 'mg':
+                image = require('../icons/flags/flags_iso/48/mg.png');
+                break;
+            case 'mv':
+                image = require('../icons/flags/flags_iso/48/mv.png');
+                break;
+            case 'np':
+                image = require('../icons/flags/flags_iso/48/np.png');
+                break;
+            case 'pn':
+                image = require('../icons/flags/flags_iso/48/pn.png');
+                break;
+            case 'sb':
+                image = require('../icons/flags/flags_iso/48/sb.png');
+                break;
+            case 'sr':
+                image = require('../icons/flags/flags_iso/48/sr.png');
+                break;
+            case 'tk':
+                image = require('../icons/flags/flags_iso/48/tk.png');
+                break;
+            case 'us':
+                image = require('../icons/flags/flags_iso/48/us.png');
+                break;
+            case 'yt':
+                image = require('../icons/flags/flags_iso/48/yt.png');
+                break;
+            default:
+                image = null;
         }
-      }
-    }
-
-    this.setState({
-      dataSource: this.state.dataSource.cloneWithRows(results),
-    });
-  },
 
 
-  doSearch(text) {
-    this.setState({search: text});
-    this.updateRows(text);
-  },
-  componentDidMount(){
-    this.updateRows(' ');
-  },
+        if (image === null) {
+            return (
+                <TouchableHighlight
+                    key={rowData.alpha2}
+                    onPress={() => this.onSelect(rowData.name, rowData[this.props.code])}
+                    underlayColor={this.getStyle('underlayColor').pop()}
 
-  renderHeader() {
-    return (
-      <View
-        style={this.getStyle(['textInputContainer'])}
-      >
-        <TextInput
-          autoFocus={this.props.autoFocus}
-          underlineColorAndroid='transparent'
-          autoCorrect={false}
-          style={this.getStyle(['textInput'])}
-          placeholder='Select your city'
-          onChangeText={this.doSearch}
-          value={this.state.search}
-          clearButtonMode="while-editing"
-          selectionColor={'#ff764d'}
-        />
-      </View>
-    );
-  },
+                    style={this.getStyle(['row'])}
+                >
+                  <View style={{
+                      flexDirection: 'row',
+                      alignItems: 'center',
+                  }}>
+                    <View
+                        style={{
+                            backgroundColor: '#c9c9c9',
+                            height: 20,
+                            width: 30,
+                            marginLeft: 10,
+                            marginRight: 10,
+                        }}
+                    />
 
-  renderSeparator(sectionId, rowId) {
-    return (
-      <View
-        key={`sep:${sectionId}:${rowId}`}
-        style={this.getStyle(['separator'])}
-      />
-    );
-  },
+                    <Text numberOfLines={1} style={{color:'#61616b',
+                        flex: 1,
+                    }}>{rowData.name}</Text>
+                  </View>
+                </TouchableHighlight>
+            );
+        } else {
+            return (
+                <TouchableHighlight
+                    key={rowData.alpha2}
 
-  render: function() {
-    return (
-      <View
-        style={this.getStyle(['container'])}
-      >
-        {this.renderHeader()}
-        <ListView
-          style={this.getStyle(['listView'])}
+                    onPress={() => this.onSelect(rowData.name, rowData[this.props.code])}
+                    underlayColor={this.getStyle('underlayColor').pop()}
 
-          dataSource={this.state.dataSource}
-          renderRow={this.renderRow}
-
-          automaticallyAdjustContentInsets={false}
-
-          initialListSize={10}
-          pageSize={10}
-
-          keyboardShouldPersistTaps="always"
-          keyboardDismissMode="on-drag"
-
-          renderSeparator={this.renderSeparator}
-
-          enableEmptySections={true}
-
-        />
-      </View>
-
-    );
-  },
-
-  defaultStyles: {
-    container: {
-      flex: 1,
+                    style={this.getStyle(['row'])}
+                >
+                  <View style={{
+                      flexDirection: 'row',
+                      alignItems: 'center',
+                  }}>
+                    <Image
+                        key={rowData.alpha2+'Image'}
+                        resizeMode={Image.resizeMode.contain}
+                        source={image}
+                        style={{
+                            height: 30,
+                            width: 30,
+                            marginLeft: 10,
+                            marginRight: 10,
+                        }}
+                    />
+                    <Text numberOfLines={1} style={{color:'#61616b',
+                        flex: 1,
+                    }}>{rowData.name}</Text>
+                  </View>
+                </TouchableHighlight>
+            );
+        }
     },
-    listView: {
-      flex: 1,
+
+    getInitialState: function() {
+        var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+        return {
+            dataSource: ds.cloneWithRows([]),
+            search: '',
+        };
     },
-    textInputContainer: {
-      backgroundColor: '#C9C9CE',
-      height: 120,
-      borderTopColor: '#7e7e7e',
-      borderBottomColor: '#b5b5b5',
-      borderTopWidth: 1 / PixelRatio.get(),
-      borderBottomWidth: 1 / PixelRatio.get(),
+
+    updateRows(text = '') {
+        if (text.length === 0) {
+            this.setState({
+                dataSource: this.state.dataSource.cloneWithRows([]),
+            });
+            return;
+        }
+
+        var results = [];
+
+        for (let i = 0; i < countries.length; i++) {
+            if (countries[i].name.toLowerCase().indexOf(text.trim().toLowerCase()) !== -1) {
+                results.push(countries[i]);
+                if (results.length === 10) { // max results
+                    break;
+                }
+            }
+        }
+
+        this.setState({
+            dataSource: this.state.dataSource.cloneWithRows(results),
+        });
     },
-    textInput: {
-      backgroundColor: '#FFFFFF',
-      height: 28,
-      borderRadius: 5,
-      paddingTop: 4.5,
-      paddingBottom: 4.5,
-      paddingLeft: 10,
-      paddingRight: 10,
-      marginTop: 7.5,
-      marginLeft: 8,
-      marginRight: 8,
-      fontSize: 15,
+
+
+    doSearch(text) {
+        this.setState({search: text});
+        this.updateRows(text);
     },
-    row: {
-      height: 44,
-      // padding: 10,
-      justifyContent: 'center',
-      backgroundColor: '#fff',
+    componentDidMount(){
+        this.updateRows(' ');
     },
-    separator: {
-      height: 0.5,
-      backgroundColor: '#9ba1ac',
+
+    renderHeader() {
+        return (
+            <View
+                style={this.getStyle(['textInputContainer'])}
+            >
+              <TextInput
+                  autoFocus={this.props.autoFocus}
+                  underlineColorAndroid='transparent'
+                  autoCorrect={false}
+                  style={this.getStyle(['textInput'])}
+                  placeholder='Select your city'
+                  onChangeText={this.doSearch}
+                  value={this.state.search}
+                  clearButtonMode="while-editing"
+                  selectionColor={'#ff764d'}
+              />
+            </View>
+        );
     },
-    underlayColor: '#c7c7cc',
-  },
+
+    renderSeparator(sectionId, rowId) {
+        return (
+            <View
+                key={`sep:${sectionId}:${rowId}`}
+                style={this.getStyle(['separator'])}
+            />
+        );
+    },
+
+    render: function() {
+        return (
+            <View
+                style={this.getStyle(['container'])}
+            >
+                {this.renderHeader()}
+              <ListView
+                  style={this.getStyle(['listView'])}
+
+                  dataSource={this.state.dataSource}
+                  renderRow={this.renderRow}
+
+                  automaticallyAdjustContentInsets={false}
+
+                  initialListSize={10}
+                  pageSize={10}
+
+                  keyboardShouldPersistTaps="always"
+                  keyboardDismissMode="on-drag"
+
+                  renderSeparator={this.renderSeparator}
+
+                  enableEmptySections={true}
+
+              />
+            </View>
+
+        );
+    },
+
+    defaultStyles: {
+        container: {
+            flex: 1,
+        },
+        listView: {
+            flex: 1,
+        },
+        textInputContainer: {
+            backgroundColor: '#C9C9CE',
+            height: 120,
+            borderTopColor: '#7e7e7e',
+            borderBottomColor: '#b5b5b5',
+            borderTopWidth: 1 / PixelRatio.get(),
+            borderBottomWidth: 1 / PixelRatio.get(),
+        },
+        textInput: {
+            backgroundColor: '#FFFFFF',
+            height: 28,
+            borderRadius: 5,
+            paddingTop: 4.5,
+            paddingBottom: 4.5,
+            paddingLeft: 10,
+            paddingRight: 10,
+            marginTop: 7.5,
+            marginLeft: 8,
+            marginRight: 8,
+            fontSize: 15,
+        },
+        row: {
+            height: 44,
+            // padding: 10,
+            justifyContent: 'center',
+            backgroundColor: '#fff',
+        },
+        separator: {
+            height: 0.5,
+            backgroundColor: '#9ba1ac',
+        },
+        underlayColor: '#c7c7cc',
+    },
 });
