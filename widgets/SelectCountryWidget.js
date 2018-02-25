@@ -1922,9 +1922,6 @@ module.exports = createReactClass({
         for (let i = 0; i < countries.length; i++) {
             if (countries[i].name.toLowerCase().indexOf(text.trim().toLowerCase()) !== -1) {
                 results.push(countries[i]);
-                if (results.length === 10) { // max results
-                    break;
-                }
             }
         }
 
@@ -1973,12 +1970,10 @@ module.exports = createReactClass({
 
     render: function() {
         return (
-            <View
-                style={this.getStyle(['container'])}
-            >
-                {this.renderHeader()}
-              <ListView
-                  style={this.getStyle(['listView'])}
+
+
+            <ListView
+                style={this.getStyle(['listView'])}
 
                   dataSource={this.state.dataSource}
                   renderRow={this.renderRow}
@@ -1995,8 +1990,9 @@ module.exports = createReactClass({
 
                   enableEmptySections={true}
 
-              />
-            </View>
+                renderSectionHeader={this.renderHeader}
+
+            />
 
         );
     },
