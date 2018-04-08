@@ -1070,8 +1070,7 @@ module.exports = createReactClass({
         this.state.search = name;
         this.props.trackChildProperty('cityValue', value);
         this.props.trackChildProperty('cityName', name);
-        console.log(value);
-        console.log(name);
+        this.props.navigatore.goBack(null);
     },
 
 
